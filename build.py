@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 import argparse, hashlib, json, os, stat, sys, tempfile, types, zipfile
 BASE_BUILDER_SHA256 = '48b61557356fc64cc3d8fd11822953ec0962855aec2d236a056d7dda9aad9cf1'
 BASE_MANIFEST_SHA256 = '29239835f2f409c7d5da0de342d9df0c5226228d87629b8da0ced35af0864b7e'
-OVERLAY_MANIFEST_SHA256 = '5afc53f3af4ef8746e060d1974b0cd1bc5ae8998c32531bc34803792a453843d'
+OVERLAY_MANIFEST_SHA256 = 'f3f81030df989ee50a344fbc75732e7c90b12280d06b89406e8da2ccb26d128c'
 PUBLIC_PATHS = ('creators/index.html','creators/sites.json','directory/businesses.json','index.html')
 FINAL_FILE_COUNT = 3040
 MAX_ARCHIVE_BYTES = 8*1024*1024
@@ -51,11 +51,11 @@ def load_inputs(repo):
     baseraw=read_pinned(repo/'packs/packs.json',BASE_MANIFEST_SHA256);base=json.loads(baseraw,object_pairs_hook=strict_object)
     raw=read_pinned(overlay/'manifest.json',OVERLAY_MANIFEST_SHA256);m=json.loads(raw,object_pairs_hook=strict_object)
     need(type(m)is dict and set(m)=={'format','profile','origin','base','archive','overlay_files','file_count','total_bytes','files','business_records','creator_records'},'Overlay manifest schema')
-    need(type(m['format'])is int and m['format']==1 and m['profile']=='master-directory-business3179-creator3384-v1'and m['origin']==ORIGIN,'Exact directory profile')
+    need(type(m['format'])is int and m['format']==1 and m['profile']=='master-directory-business3180-creator3384-v2'and m['origin']==ORIGIN,'Exact directory profile')
     need(m['base']=={'source_commit':'d7e7938d68ddce8dcddcc86590d42f8cce27fc39','builder_sha256':BASE_BUILDER_SHA256,'manifest_sha256':BASE_MANIFEST_SHA256,'file_count':3037,'total_bytes':90281874,'root_index_sha256':'0df4125f86f0c0298d70994676cadb5db00222efdb8cbccf8a8cd011c717afdb'},'Exact current still-fixed base required')
     need(type(m['file_count'])is int and m['file_count']==FINAL_FILE_COUNT and FINAL_FILE_COUNT<=20000,'Exact combined file count/cap')
     need(integer(m['total_bytes'])and m['total_bytes']<=MAX_TOTAL_BYTES,'Combined byte cap')
-    need(type(m['business_records'])is int and m['business_records']==3179 and type(m['creator_records'])is int and m['creator_records']==3384,'Exact reviewed directory counts')
+    need(type(m['business_records'])is int and m['business_records']==3180 and type(m['creator_records'])is int and m['creator_records']==3384,'Exact reviewed directory counts')
     bf=records(base['files']);of=records(m['overlay_files']);final=records(m['files'])
     need(base['file_count']==3037 and len(bf)==3037 and base['total_bytes']==90281874,'Exact base inventory')
     need(tuple(sorted(of))==PUBLIC_PATHS and set(of)&set(bf)=={'index.html'},'Only root index replacement and three new paths')
@@ -88,10 +88,10 @@ class DirectoryHTML(HTMLParser):
 def validate_directory_data(data):
     business=json.loads(data['directory/businesses.json'],object_pairs_hook=strict_object)
     creator=json.loads(data['creators/sites.json'],object_pairs_hook=strict_object)
-    need(len(business['records'])==3179 and len(creator['records'])==3384,'Data record count mismatch')
+    need(len(business['records'])==3180 and len(creator['records'])==3384,'Data record count mismatch')
     need(all(r['id'].startswith('business-')and r['category']in ('barbers','restaurants')for r in business['records']),'Business-only data required')
     need(all(r['id'].startswith('creator-')for r in creator['records']),'Creator-only data required')
-    for path,db,count in [('index.html',business,3179),('creators/index.html',creator,3384)]:
+    for path,db,count in [('index.html',business,3180),('creators/index.html',creator,3384)]:
         text=data[path].decode('utf-8');p=DirectoryHTML();p.feed(text)
         url=ORIGIN+'/'if path=='index.html'else ORIGIN+'/creators/'
         need(p.canonical==[url]and p.og==[url]and p.noindex,'Exact canonical/og/noindex required')
@@ -145,7 +145,7 @@ def run_build(repo, output):
                 except OSError:pass # Never delete any competing nonempty output.
                 raise
     finally:sys.modules.pop(name,None)
-    result={'files':len(final),'bytes':m['total_bytes'],'preserved_base_non_index_files':3036,'replaced_files':['index.html'],'added_files':['creators/index.html','creators/sites.json','directory/businesses.json'],'business_directory_records':3179,'separate_creator_records':3384,'base_business_homepages':242,'overlay_manifest_sha256':OVERLAY_MANIFEST_SHA256}
+    result={'files':len(final),'bytes':m['total_bytes'],'preserved_base_non_index_files':3036,'replaced_files':['index.html'],'added_files':['creators/index.html','creators/sites.json','directory/businesses.json'],'business_directory_records':3180,'separate_creator_records':3384,'base_business_homepages':242,'overlay_manifest_sha256':OVERLAY_MANIFEST_SHA256}
     print(json.dumps(result,sort_keys=True));return result
 
 def main():
