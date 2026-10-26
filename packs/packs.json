@@ -1,12 +1,12 @@
 {
   "format": 1,
   "file_count": 3037,
-  "total_bytes": 90279174,
+  "total_bytes": 90281874,
   "packs": [
     {
       "name": "part-001.zip",
-      "size": 5134512,
-      "sha256": "90b17ce065098c8aa9e44433e461d7d3b8f6f3a1b777c191ada227d470c17251"
+      "size": 5137209,
+      "sha256": "d1ea3f7059148a9e9e10bd16f3ea12d52105588924d5c783af20004aa1c08cbd"
     },
     {
       "name": "part-002.zip",
@@ -40,33 +40,33 @@
     },
     {
       "name": "part-008.zip",
-      "size": 5543888,
-      "sha256": "5017e1ae4f05f042cfb0224ba7a618a6b52f582e6cc3da1dd46e1d08480cbb61"
+      "size": 5547475,
+      "sha256": "239da48c08301366d9f0bb72d9e7b9fc59a2953b5b2485a113248a014107e689"
     },
     {
       "name": "part-009.zip",
-      "size": 4607053,
-      "sha256": "7be79e3b0a5f6443d6c1ac5f04740f4e74510f78c467d025d3ac026af58470a9"
+      "size": 4612510,
+      "sha256": "a9052770008ada2b67b2ea0da03cf726b93e19a1cbce83ecbfcdf6cb81387ac8"
     },
     {
       "name": "part-010.zip",
-      "size": 4479820,
-      "sha256": "6258da4143cc5b9743c3f380c01b71ea11470f476cb60eaa4f95480122c616c3"
+      "size": 4484808,
+      "sha256": "0e65e2fcb4fc4c66c7c3fda534d0ca1665823c7fe0dfe06bafcdedc289045101"
     },
     {
       "name": "part-011.zip",
-      "size": 4304499,
-      "sha256": "f3a380256a21b8958569ab0c6dfc4fe26aa807f199cce7280ca96aa084c0aeb6"
+      "size": 4304682,
+      "sha256": "9b4b2d8457efc5e117e2050254db74140043d00885240e32df0090bdebf22902"
     },
     {
       "name": "part-012.zip",
-      "size": 4662580,
-      "sha256": "83bc0a161afb1265e5e6655938b76391bfe387d0c2a80afe6a4f2186fe7c931b"
+      "size": 4667933,
+      "sha256": "0f1544c3302c9494c804497863113d06bed114d892ad024db2fb084b22d5c097"
     },
     {
       "name": "part-013.zip",
-      "size": 4289316,
-      "sha256": "d58c408b7266cf0d55a10c5dadcaa92c1c6f261612954b440464768c210968c5"
+      "size": 4294494,
+      "sha256": "d5adfceaa5bcd80bfb626edafe9b40aa2bc71dafa07ac696bdc4ed73882ff7f5"
     },
     {
       "name": "part-014.zip",
@@ -572,8 +572,8 @@
     },
     {
       "path": "acoustic-cafe-amh/index.html",
-      "size": 24073,
-      "sha256": "b195aba153c65a3515f243663816224ccc8b0239ca874f0458b3d45802354202"
+      "size": 24181,
+      "sha256": "9356707dd2454f0d71a5684b6c1f67b780941be0010b05adac7d65a10872d313"
     },
     {
       "path": "acoustic-cafe-amh/privacy/index.html",
@@ -2862,8 +2862,8 @@
     },
     {
       "path": "blooming-grounds-coffee-house-amh/index.html",
-      "size": 24619,
-      "sha256": "cc49fe7afc87dbe879c718ba790a389a9a7781c9c13e786f7dfebc884063bb81"
+      "size": 24727,
+      "sha256": "3465ec53b90f475d6b1ba57792bdd194867bfa799849778a7dbf206c5325d348"
     },
     {
       "path": "blooming-grounds-coffee-house-amh/privacy/index.html",
@@ -2917,8 +2917,8 @@
     },
     {
       "path": "blooming-grounds-express-amh/index.html",
-      "size": 23323,
-      "sha256": "c0c6d739b5dfa952171004732e20bb52c29bc484602a89ce3e84ed03d6d80646"
+      "size": 23431,
+      "sha256": "a504253f6a848f35c2c49b6906c851c0f2760337df9e4c244759d50f29b770fc"
     },
     {
       "path": "blooming-grounds-express-amh/privacy/index.html",
@@ -2972,8 +2972,8 @@
     },
     {
       "path": "blue-heron-coffeehouse-amh/index.html",
-      "size": 23556,
-      "sha256": "23afbf1a0beea5cc7537bb8aebe1c53e708a35ef5e5a132f4f11d4ec60275f67"
+      "size": 23664,
+      "sha256": "706f0c8480a9aaebcba1493cd8e9cbfc90bbeb5fdaa90304eab6df3f1d6258f7"
     },
     {
       "path": "blue-heron-coffeehouse-amh/privacy/index.html",
@@ -3202,8 +3202,8 @@
     },
     {
       "path": "burgies-coffee-and-tea-co-amh/index.html",
-      "size": 22940,
-      "sha256": "544f2aa0b8501263fb12752b6e2c82831c728ba751b6b06d54428d8e02fb9c10"
+      "size": 23048,
+      "sha256": "1959f60e48d38036880880e5eaf98bf370fb546919f869252fe004da7fef992e"
     },
     {
       "path": "burgies-coffee-and-tea-co-amh/privacy/index.html",
@@ -3552,8 +3552,8 @@
     },
     {
       "path": "cafe-astoria-amh/index.html",
-      "size": 22663,
-      "sha256": "ad7289d2a0036a5ce36eb41ecf139721b283584fdbcb2ea8280e9e3b91cd7ac1"
+      "size": 22771,
+      "sha256": "1d641bc9e4e830739a137914ad2dd1fe41f808ba0281941c3bb43038f34bbab4"
     },
     {
       "path": "cafe-astoria-amh/privacy/index.html",
@@ -3827,8 +3827,8 @@
     },
     {
       "path": "cafe-zorya-amh/index.html",
-      "size": 23733,
-      "sha256": "f90a15826b1cb1da3bd713796e6ac1074e7e00e35a9df0b8735c51ea6a4edb0c"
+      "size": 23841,
+      "sha256": "d8a4c20faac0b06c0fd5ec4c29a6317d155d0d2274b82c9bc81298f42e167853"
     },
     {
       "path": "cafe-zorya-amh/privacy/index.html",
@@ -4067,8 +4067,8 @@
     },
     {
       "path": "charlottes-coffee-house-amh/index.html",
-      "size": 22122,
-      "sha256": "8f9481af943210ff16bdb3b96cb003ddf8e810dc37f1955bd4458b9b1c9de8f3"
+      "size": 22230,
+      "sha256": "88e239b6c3bc4f11b1971812903fe0a18bd3ea0ef6000eb0a7bf5ef8a292a6a2"
     },
     {
       "path": "charlottes-coffee-house-amh/privacy/index.html",
@@ -4722,8 +4722,8 @@
     },
     {
       "path": "cottonwood-canyon-amh/index.html",
-      "size": 24337,
-      "sha256": "9c3a3f421e9172ef94b7fc95eede88c2b2c0558de46d41a1f649d9a0f909c4a4"
+      "size": 24445,
+      "sha256": "5bedd2db6fa75d2ec48993e532cf739d4c3319c63ef6360e7825b45d593beee1"
     },
     {
       "path": "cottonwood-canyon-amh/privacy/index.html",
@@ -6737,8 +6737,8 @@
     },
     {
       "path": "fillin-station-coffeehouse-amh/index.html",
-      "size": 22815,
-      "sha256": "814394ecaab0ea5301729414bce97ea6d35c13ce66a64f6a0e23f5f3fa4b9dc3"
+      "size": 22923,
+      "sha256": "96db2978c150dd2f028145202c46eafdf99b20f9bf446c07bfbe774c8a1dda77"
     },
     {
       "path": "fillin-station-coffeehouse-amh/privacy/index.html",
@@ -8412,8 +8412,8 @@
     },
     {
       "path": "java-house-iowa-city-1575-s-1st-ave-amh/index.html",
-      "size": 22169,
-      "sha256": "ada67e52a3dc6c4bdc7ba74126c8f84de084819fb96b247020268b1c9d97d60c"
+      "size": 22277,
+      "sha256": "611313b1c4cde52fd063a44a32f828927bdfa90035f98dd4f888fd6caaa361f9"
     },
     {
       "path": "java-house-iowa-city-1575-s-1st-ave-amh/privacy/index.html",
@@ -8467,8 +8467,8 @@
     },
     {
       "path": "java-house-iowa-city-713-mormon-trek-blvd-amh/index.html",
-      "size": 22841,
-      "sha256": "6b090553c01047005738c098a06c8d9c9c29e2e017ea51aa1f80d0debe6b6005"
+      "size": 22949,
+      "sha256": "3560997a1da6b449a82aa7cf50df90e8b3cc655485cc8f4f1ed8a40537ab785e"
     },
     {
       "path": "java-house-iowa-city-713-mormon-trek-blvd-amh/privacy/index.html",
@@ -8837,8 +8837,8 @@
     },
     {
       "path": "kismet-coffee-and-bloom-amh/index.html",
-      "size": 23021,
-      "sha256": "4b18da437d2202551999962f805262d7cb3e6a45d5e58d866afc4bf8a6bbde42"
+      "size": 23129,
+      "sha256": "ab2e16d648ca861c9fa68b1947c047cd20b6d0cfb9d709f0df85ae4d3e2e7bc5"
     },
     {
       "path": "kismet-coffee-and-bloom-amh/privacy/index.html",
@@ -8957,8 +8957,8 @@
     },
     {
       "path": "korppi-coffee-bakeshop-amh/index.html",
-      "size": 24216,
-      "sha256": "bb42769dd9197046b7eea27630fe540a69be67ff0f3be9146187f9b9c940d6c9"
+      "size": 24324,
+      "sha256": "3707649c2566c52d33f3400ca4a4f6c582801c80e29f9a06c9bca8de331437f4"
     },
     {
       "path": "korppi-coffee-bakeshop-amh/privacy/index.html",
@@ -10722,8 +10722,8 @@
     },
     {
       "path": "plain-talk-books-and-coffee-amh/index.html",
-      "size": 23155,
-      "sha256": "99281eb71ec45f3ed071eda382392ffa50d73259d80179823544875ac5ad97b7"
+      "size": 23263,
+      "sha256": "bf02061e14de551db212a2a706286b91318b200d17571bae5e802dbb3762dd36"
     },
     {
       "path": "plain-talk-books-and-coffee-amh/privacy/index.html",
@@ -10777,8 +10777,8 @@
     },
     {
       "path": "precipice-coffee-amh/index.html",
-      "size": 22365,
-      "sha256": "bf57c8c86436c60a69cd22564e7ecbc93700197634c3fce56c04aa1572b9d226"
+      "size": 22473,
+      "sha256": "389599173233907a81fa60b6711b3cebe68aaf09e93c792aa67bcdef06e78e5f"
     },
     {
       "path": "precipice-coffee-amh/privacy/index.html",
@@ -10832,8 +10832,8 @@
     },
     {
       "path": "press-coffee-amh/index.html",
-      "size": 24522,
-      "sha256": "43a48f89840dc0ab82f06da8b5644f208fceebe48da4e759e7d866529b6e1b6b"
+      "size": 24630,
+      "sha256": "ffd14c7a7e2c39cda854a5f8dee3cbfebb8c7e9a1e4684702543f3b60b786d8c"
     },
     {
       "path": "press-coffee-amh/privacy/index.html",
@@ -11137,8 +11137,8 @@
     },
     {
       "path": "river-rock-coffee-and-tea-mankato-amh/index.html",
-      "size": 24664,
-      "sha256": "9653b359ce3306240622f7f9d565d7354afc5d4b0f63e1461123f955b7f63b4a"
+      "size": 24772,
+      "sha256": "7ec23444dac6d57b92854a41ba56750b8e2312a393d8a2ef7382fe6876193ec6"
     },
     {
       "path": "river-rock-coffee-and-tea-mankato-amh/privacy/index.html",
@@ -11192,8 +11192,8 @@
     },
     {
       "path": "river-rock-coffee-and-tea-saint-peter-amh/index.html",
-      "size": 23017,
-      "sha256": "e1cb0e4195769bd13a0377476ecf0f80aa0799741f1e1c829324379d9ead4e23"
+      "size": 23125,
+      "sha256": "c83e88b8721da83656c1f505f06498fc679447ed5399de05eaec7055ce5ae276"
     },
     {
       "path": "river-rock-coffee-and-tea-saint-peter-amh/privacy/index.html",
@@ -11732,8 +11732,8 @@
     },
     {
       "path": "sidecar-coffee-cedar-falls-924-viking-road-suite-129-amh/index.html",
-      "size": 24683,
-      "sha256": "a0f22cd8a53e3ad89f76e5c9bd6ad985f3cfe2ed0edd17359e86556ad83364f2"
+      "size": 24791,
+      "sha256": "ef1b61a05f54f0d7813e5743a9b61f4fe3341f55d9ff1151ab8bfd98fa2247e1"
     },
     {
       "path": "sidecar-coffee-cedar-falls-924-viking-road-suite-129-amh/privacy/index.html",
@@ -11787,8 +11787,8 @@
     },
     {
       "path": "sidecar-coffee-waterloo-1850-w-ridgeway-ave-ste-7-amh/index.html",
-      "size": 25018,
-      "sha256": "68de2b47d08265fea4feb4eeda8fc7833ecc25fbdd218d5ed286a8832406681c"
+      "size": 25126,
+      "sha256": "85a00003df0070d427613bd425c70a9c0eb358e237d9f57cae08b64715c83adf"
     },
     {
       "path": "sidecar-coffee-waterloo-1850-w-ridgeway-ave-ste-7-amh/privacy/index.html",
@@ -11842,8 +11842,8 @@
     },
     {
       "path": "sidecar-coffee-waterloo-21-west-jefferson-street-suite-101-amh/index.html",
-      "size": 24842,
-      "sha256": "81b735ecea468a481727caf59911418f5e3e8efef9fb006a18390cd4e89d2f29"
+      "size": 24950,
+      "sha256": "44089c021a033b5a06f5cf264134e52b9c65c9b712dae4acd93e5a56f5b08769"
     },
     {
       "path": "sidecar-coffee-waterloo-21-west-jefferson-street-suite-101-amh/privacy/index.html",
@@ -12387,8 +12387,8 @@
     },
     {
       "path": "stonehouse-coffee-baxter-amh/index.html",
-      "size": 23133,
-      "sha256": "21946dc44e1c2811aea3d515263b6f14dce39ccc1047466e207b9de1c91a64ac"
+      "size": 23241,
+      "sha256": "3b7e6198032340b97ba30ec60bee36a383e5994b6403ab59cf3c0d7427a4d4bd"
     },
     {
       "path": "stonehouse-coffee-baxter-amh/privacy/index.html",
@@ -12442,8 +12442,8 @@
     },
     {
       "path": "stonehouse-coffee-nisswa-amh/index.html",
-      "size": 22426,
-      "sha256": "402c4d76d6e7348393ca3cd2dbe814a368532f6abb9e26639ef58d7301efd80a"
+      "size": 22534,
+      "sha256": "bd179b657615b7a4e4e2149ad2563e55f8d894806e5491abe642916e8b6b8a3b"
     },
     {
       "path": "stonehouse-coffee-nisswa-amh/privacy/index.html",
@@ -13442,8 +13442,8 @@
     },
     {
       "path": "the-hideaway-coffeehouse-and-winebar-amh/index.html",
-      "size": 23273,
-      "sha256": "d9388afb028e421098ddb6ccbac605487580d3034e8144c333242da69c3023e8"
+      "size": 23381,
+      "sha256": "ee2a79edda772fb4f177ec1b42cd12c7aba0b2e24caa89393c31b3e6ee57cdd4"
     },
     {
       "path": "the-hideaway-coffeehouse-and-winebar-amh/privacy/index.html",
