@@ -8,7 +8,7 @@ from dataclasses import dataclass
 import argparse, hashlib, json, os, re, shutil, stat, tempfile, types, zipfile
 
 ORIGIN = 'https://sites-amh.pages.dev'
-PROFILE_MANIFEST_SHA256 = '7ccd8b62c0debba9547e46836a12b3d95b88584051c1c7e9d211c232682f032a'
+PROFILE_MANIFEST_SHA256 = 'd9d0d66cd5d3f82d999321ce2cbd0e3da0996149841e4d75fb08a789bf1d7bdc'
 EXACT_PACK_NAMES = ('part-001.zip', 'part-002.zip', 'part-003.zip', 'part-004.zip', 'part-005.zip', 'part-006.zip', 'part-007.zip', 'part-008.zip', 'part-009.zip', 'part-010.zip', 'part-011.zip', 'part-012.zip', 'part-013.zip', 'part-014.zip')
 EXPECTED_FILE_COUNT = 3037
 EXPECTED_HOMEPAGES = 242
