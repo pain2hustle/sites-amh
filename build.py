@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 import argparse,hashlib,importlib.util,json,os,stat,tempfile,zipfile
 
 FROZEN_BUILDER_SHA256='25d0648d94b07bccbc335543bb74824be0c46b8877346eda58e004e6a8f26a79'
-RELEASE_MANIFEST_SHA256='6b9c5a1b2ee4a75e99254890c4918c8084a950b0f1700acb563afd3dc10e0968'
+RELEASE_MANIFEST_SHA256='e6637f08049d819e78bd66403931363d6119bd70e9343eaaa9cf54e6a0ee1749'
 ORIGIN='https://sites-amh.pages.dev'
 PREFIX='business/batch3/'
 EXPECTED_NEW=290
