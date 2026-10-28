@@ -3,7 +3,7 @@
 from pathlib import Path
 import argparse,hashlib,importlib.util,json,os,stat,tempfile,zipfile
 BASE_SHA='f68462be31b9da370c040e00784eeafffe6e5857f0309692324b4dc1ca384a88'
-MANIFEST_SHA='a6e12526ee9ac270e5771b564a230cba7f78730a0c6e3039a4d482528148e153'
+MANIFEST_SHA='74ebbc4f2165df721dc83f9cbcfb36370c5650ef128d3928356cfd51485decde'
 NAMESPACE='creators/ari1of1/'
 
 def need(v,msg):
@@ -19,7 +19,7 @@ def load_release(repo):
  need(m['format']==1 and m['origin']=='https://sites-amh.pages.dev'and m['namespace']==NAMESPACE,'Creator identity/origin')
  need(m['base_commit']=='73432bb2374697b75e6bd3b9495430607d0807a1'and m['base_builder_sha256']==BASE_SHA,'Base identity')
  need(m['business_records']==3489 and m['previous_creator_records']==3386 and m['creator_records']==3387 and m['verified_reels']==4,'Honest release counts')
- files=m['files'];need(len(files)==51 and all(n in('creators/index.html','creators/sites.json')or n.startswith(NAMESPACE)for n in files),'Exact creator-only scope')
+ files=m['files'];need(len(files)==55 and all(n in('creators/index.html','creators/sites.json')or n.startswith(NAMESPACE)for n in files),'Exact creator-only scope')
  need(all('..'not in Path(n).parts and not n.startswith('/')and '\\'not in n for n in files),'Safe release paths')
  archive=m['archive'];need(archive['name']=='ari1of1.zip'and 0<archive['size']<8*1024*1024,'Bounded archive');p=safe(repo/'creator-release'/archive['name']);need(p.stat().st_size==archive['size'],'Archive size');b=p.read_bytes();need(sha(b)==archive['sha256'],'Archive hash')
  data={}
@@ -43,7 +43,7 @@ def apply_release(output,m,data):
   if n in before:p.unlink()
   with os.fdopen(os.open(p,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o644),'wb')as f:f.write(b)
  after={p.relative_to(output).as_posix():sha(p.read_bytes())for p in output.rglob('*')if p.is_file()}
- need(len(after)==6338 and all(after[n]==h for n,h in before.items()if n not in data),'Every prior website retained byte-for-byte')
+ need(len(after)==6342 and all(after[n]==h for n,h in before.items()if n not in data),'Every prior website retained byte-for-byte')
  need(all(after[n]==m['files'][n]['sha256']for n in data),'Every creator output hash')
  return {'files':len(after),'prior_files_preserved':6287,'business_records_unchanged':3489,'creator_records':3387,'verified_reels':4,'requested_video_target_met':False}
 

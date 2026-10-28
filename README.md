@@ -15,4 +15,4 @@ The extractor verifies every pack/member/path/count/size/hash, noindex, media, o
 
 ## Current additive creator release
 
-Ari's full creator website is exported separately at `/creators/ari1of1/` and added to the searchable `/creators/` directory. All business sites and prior creator records are preserved. See [`creator-release/README.md`](creator-release/README.md) for the design, source workflow, exact shop-link handling, tests and honest four-Reel coverage limit (the requested 10–12 target is not yet met). The existing build command and output directory are unchanged.
+Ari's full creator website is exported separately at `/creators/ari1of1/` and added to the searchable `/creators/` directory. All business sites and prior creator records are preserved. See [`creator-release/README.md`](creator-release/README.md) for the design, source workflow, exact shop-link handling, tests and honest four-Reel coverage limit (the requested minimum of 16 distinct clips is not yet met). The existing build command and output directory are unchanged.
