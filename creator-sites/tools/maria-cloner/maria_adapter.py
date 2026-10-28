@@ -127,7 +127,7 @@ def build(data,out):
     shutil.copy2(HERE/'integration.css',assets/'integration.css')
     wordmark='/assets/maria-reference/creator-wordmark.webp'
     movieart='/assets/maria-reference/movie-club.webp'
-    for label,target in [(cfg['name'],wordmark),(cfg['name'].split()[0]+'’s Movie Club',movieart)]:
+    for label,target in [(cfg['name'],wordmark),(cfg.get('movie_title',cfg['name']+'’s Movie Club'),movieart)]:
         subprocess.run([sys.executable,str(HERE/'art/bubble-letters.py'),label,str(out/target.lstrip('/')),'1200'],check=True,capture_output=True)
     first=soup((original/'index.html').read_text(encoding='utf8'))
     portrait=(first.select_one('.film .media img') or first.select_one('main img'))['src']
@@ -144,12 +144,12 @@ def build(data,out):
         for l in s.select('link[rel=stylesheet]'):
             if l.get('href')=='/assets/release-layout.css':l.decompose()
         for name in ['layout.css','cinema.css','brand.css','extensions.css','fix-1012.css','integration.css']:
-            l=s.new_tag('link',rel='stylesheet',href='/assets/maria-reference/'+name);s.head.append(l)
+            l=s.new_tag('link',rel='stylesheet',href='/assets/maria-reference/'+name+'?v='+sha(assets/name)[:12]);s.head.append(l)
         for img in s.select('img'):
             if img.get('src')==cfg['wordmark']:img['src']=wordmark
         title=s.select_one('#movieClub h2')
         if title:
-            title.clear();art=s.new_tag('img',src=movieart,alt=cfg['name'].split()[0]+'’s Movie Club');art['class']='movie-title-art';title.append(art)
+            title.clear();art=s.new_tag('img',src=movieart,alt=cfg.get('movie_title',cfg['name']+'’s Movie Club'));art['class']='movie-title-art';title.append(art)
         s.body['data-maria-slug']=cfg['slug']
         wr(p,str(s))
     result=audit(out,original);result.update(slug=cfg['slug'],source=str(original),output=str(out),reference_sha256=sha(refdir/'index.html'),complete_payload=True,visual_status='pending',backend='Creator runtime retained; donor backend not copied')

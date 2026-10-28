@@ -85,3 +85,25 @@ html[data-theme=light] .film .cap,html[data-theme=light] .film .shot-tag{color:#
 header.maria-clone-header .maria-socials img{filter:brightness(0) invert(1)!important}
 html[data-theme=light] header.maria-clone-header .maria-socials img{filter:none!important}
 .film .cap p{max-width:none!important;width:auto!important}
+
+/* Maria's current runtime injects its own player toolbar; retained creator players need their original controls. */
+.movie-feature{height:auto!important;aspect-ratio:auto!important;overflow:hidden!important}
+.movie-feature>.movie-copy{display:block!important;position:relative!important;inset:auto!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;padding:24px!important;background:#1b1224!important;color:#fff!important}
+.movie-feature>.movie-copy .movie-actions{display:flex!important;flex-wrap:wrap!important;gap:12px!important}
+.movie-feature>.movie-copy button,.movie-feature>.movie-copy a{display:inline-flex!important;align-items:center!important;min-height:44px!important;visibility:visible!important;opacity:1!important}
+.movie-feature>img{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;aspect-ratio:16/10!important;object-fit:cover!important}
+html[data-theme=light] .movie-feature>.movie-copy{background:#f7f0e7!important;color:#28182e!important}
+
+/* Frame supplied screenshot portraits without altering original image bytes. */
+body[data-maria-slug=thecrookedman10] #galleryImage,body[data-maria-slug=thecrookedman10] .photo-item img,body[data-maria-slug=thecrookedman10] .photo-story-stage img{width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;object-position:center 40%!important}
+body[data-maria-slug=thecrookedman10] #galleryImage[src$="portrait-3.jpg"],body[data-maria-slug=thecrookedman10] .photo-item img[src$="portrait-3.jpg"],body[data-maria-slug=thecrookedman10] .photo-story-stage img[src$="portrait-3.jpg"]{clip-path:inset(0 6% 0 6% round 12px);object-position:center 48%!important}
+
+img[src*="maria-reference/creator-wordmark.webp"]{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;max-width:100%!important}
+
+html[data-theme=light] header.maria-clone-header .right>button{background:#fff9!important;border-color:#402641!important;color:#28182e!important}
+html[data-theme=light] header.maria-clone-header .burger span{background:#28182e!important}
+html[data-theme=light] .film .first-actions>.btn.ghost{background:transparent!important;color:#28182e!important;border:1px solid #58334e!important}
+
+.movie-feature>img{object-fit:contain!important;background:#100c19!important}
+.movie-feature>.movie-copy{max-width:none!important;width:100%!important;box-sizing:border-box!important}
+body[data-maria-slug=thecrookedman10] .movie-pick img[src*="portrait-"]{aspect-ratio:4/3!important;height:auto!important;object-fit:cover!important;object-position:center 40%!important}
