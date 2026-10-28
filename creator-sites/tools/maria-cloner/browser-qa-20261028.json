@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-28",
+  "sites": [
+    "jailyneojeda",
+    "immapeaches",
+    "annacowgirlbgo",
+    "thecrookedman10",
+    "pamela-yanez",
+    "adina-y-flores",
+    "dannyalvarez57",
+    "allcapskat",
+    "ashleytienda",
+    "isatobaa",
+    "graciebon",
+    "sherryforeign"
+  ],
+  "reference": "actual pinned Maria public HTML/CSS through cloner adapter",
+  "static_validation": {
+    "sites": 12,
+    "files": 681,
+    "html_routes": 135,
+    "original_binary_assets_preserved": true,
+    "original_external_destinations_preserved": true,
+    "indexing_metadata_preserved": true
+  },
+  "browser_checks": {
+    "desktop_width": 1366,
+    "phone_widths": [
+      320,
+      390
+    ],
+    "scope": "Each site inspected visually on phone and desktop; representative navigation, movie dialog, gallery and theme controls tested. Shared narrow intro hit targets checked against the fixed bottom navigation. This is not an assertion that every external destination or every subpage interaction was tested.",
+    "menus": "open/Escape/focus behavior checked",
+    "players": "dialog open and cleanup checked; supplied photo-story playback checked where present",
+    "gallery": "open/close checked on every site; next navigation checked on representative implementations",
+    "age_gates": {
+      "tested_cancel_and_fresh_reopen": [
+        "ashleytienda",
+        "jailyneojeda",
+        "graciebon",
+        "isatobaa"
+      ],
+      "no_age_affirmation": true
+    },
+    "jailyne_shop_filters": {
+      "Haircare": 5,
+      "Style": 8,
+      "Magic Honey": 4
+    },
+    "adina_support": "Verified PayPal and Venmo handles retained in menu and two page locations; no transactions"
+  },
+  "fixes": [
+    "full-width hero headings and proportional wordmarks",
+    "readable text social labels",
+    "paired phone actions and motion controls clear of fixed navigation",
+    "Sherry/Danny/Nicha portrait framing without changing source media",
+    "Isatobaa age-link observer idempotence and versioned script"
+  ],
+  "limitations": [
+    "Instagram and YouTube embeds appeared blank in this browser; actual external playback remains unverified. Original-post fallback links remain.",
+    "Supplied screenshot/reel-cover resolution and baked-in media marks remain source limitations.",
+    "No external shopping transaction, adult entry, donor backend or account service was used.",
+    "Original noindex/indexing decisions remain unchanged."
+  ]
+}

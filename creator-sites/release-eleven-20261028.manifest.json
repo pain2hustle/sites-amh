@@ -1975,8 +1975,8 @@
     },
     {
       "path": "creator-sites/isatobaa/site/404.html",
-      "bytes": 7080,
-      "sha256": "66e134f862baf7db1d62279f2d3df1d35109c768ede87430e2722445d3c89445"
+      "bytes": 7095,
+      "sha256": "6a4f70babfd49f124bbd0fcb423a42cd936bc624a9dae2df3a4973ef4915b1ce"
     },
     {
       "path": "creator-sites/isatobaa/site/_headers",
@@ -1985,8 +1985,8 @@
     },
     {
       "path": "creator-sites/isatobaa/site/assets/age-confirmation.js",
-      "bytes": 9573,
-      "sha256": "63f88771085ae81f77e1ca53bed8bbc9c4c16eeb0efa8e3713630a4ee72b2e0d"
+      "bytes": 9649,
+      "sha256": "395841815ab721fba05e7bf69c61eb0a228ba9f6c96e99a3ad063c2b706b33cb"
     },
     {
       "path": "creator-sites/isatobaa/site/assets/amh-box-logo.svg",
@@ -2160,13 +2160,13 @@
     },
     {
       "path": "creator-sites/isatobaa/site/index.html",
-      "bytes": 18651,
-      "sha256": "eef5fe897f76956f2ac0be82c1cb8ab958e67ba89c1f3ef31823fd80d3e21478"
+      "bytes": 18666,
+      "sha256": "4aa41a9950e33ccd5f57056583eb38e9ec173ea86567c924275863be6b2ca592"
     },
     {
       "path": "creator-sites/isatobaa/site/photos/index.html",
-      "bytes": 8728,
-      "sha256": "6cf0925e8d4605edd5bb3295803ac33ea8387ea4289e9244d72591b201de29cb"
+      "bytes": 8743,
+      "sha256": "9f9835211afb6da7ad1d9510e20833fa25f9c48ab503e77f6f51079506d0bfd3"
     },
     {
       "path": "creator-sites/isatobaa/site/robots.txt",
@@ -2175,23 +2175,23 @@
     },
     {
       "path": "creator-sites/isatobaa/site/socials/index.html",
-      "bytes": 9667,
-      "sha256": "e00ae0161a22ab0684351664a53e59c7b1df99d12108c0171bc2fa638828e57e"
+      "bytes": 9682,
+      "sha256": "e7d375bbd5e2d4f7569cda4a12492018906d5a881a74af664bae97048bfbbb01"
     },
     {
       "path": "creator-sites/isatobaa/site/video/DconCflSquS/index.html",
-      "bytes": 9085,
-      "sha256": "e62b6a1d47fdfd4862549620c4a6ef90c5d75284d2429100eaec4baa73a30813"
+      "bytes": 9100,
+      "sha256": "fab93fa99325e7dbee04dc9731304db7392fe6b49c7e07870d518ad78ad1acdc"
     },
     {
       "path": "creator-sites/isatobaa/site/video/DcSFXmTOoeo/index.html",
-      "bytes": 9055,
-      "sha256": "4e20c3f86ff0c6100dd91443da68f770f54e6f387f75fc4d00eb1ee7ca5432ac"
+      "bytes": 9070,
+      "sha256": "8105b137ce8ea4666a23373f58875dc13bb25e625d46aa0d6aac3ab2874d5d11"
     },
     {
       "path": "creator-sites/isatobaa/site/videos/index.html",
-      "bytes": 9874,
-      "sha256": "9c66971963978b9e6d941fcea18b631443d490bd99c4d6ccf50079786b819bad"
+      "bytes": 9889,
+      "sha256": "80957e2e11028cafec51d63a0f9d4a74d0523b355a78e4e69ba3a209035fa5d7"
     },
     {
       "path": "creator-sites/graciebon/site/404.html",

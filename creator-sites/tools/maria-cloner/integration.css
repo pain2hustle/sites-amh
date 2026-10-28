@@ -107,3 +107,17 @@ html[data-theme=light] .film .first-actions>.btn.ghost{background:transparent!im
 .movie-feature>img{object-fit:contain!important;background:#100c19!important}
 .movie-feature>.movie-copy{max-width:none!important;width:100%!important;box-sizing:border-box!important}
 body[data-maria-slug=thecrookedman10] .movie-pick img[src*="portrait-"]{aspect-ratio:4/3!important;height:auto!important;object-fit:cover!important;object-position:center 40%!important}
+
+/* Preserve full heading width and readable text-only social links. */
+.film .cap h1{width:100%!important;max-width:none!important}
+header.maria-clone-header .maria-socials a.release-text-social{width:auto!important;min-width:34px!important;padding:4px!important;gap:3px!important;letter-spacing:0!important;white-space:nowrap!important;font-size:10px!important}
+/* Keep the top of Sherry's supplied portrait in the desktop hero frame. */
+@media(min-width:800px){body[data-maria-slug=sherryforeign] .opening img[src$="DdPr0gCBsHW.jpg"]{object-position:center top!important}}
+@media(max-width:799px){.film .first-actions>.btn{flex:1 1 120px!important;justify-content:center!important;text-align:center!important;letter-spacing:.025em!important;font-size:10px!important;padding:10px 12px!important}}
+
+@media(max-width:799px){body[data-maria-slug=dannyalvarez57] .film .shot .media img,body[data-maria-slug=immapeaches] .film .shot .media img{object-position:center top!important}}
+@media(max-width:799px){.film .shot .media{height:28svh!important;min-height:200px!important;max-height:270px!important}.film .cap{top:calc(var(--maria-header) + max(200px,28svh) + 44px)!important}.film .cinema-controls{bottom:calc(max(0px,880px - 100svh) + 76px)!important}.film a,.film button{scroll-margin-top:130px;scroll-margin-bottom:110px}.film .cap .hero-wordmark{max-height:75px!important}}
+
+@media(max-width:799px){.film .first-actions{flex-direction:row!important;flex-wrap:nowrap!important;max-width:none!important;width:100%!important;gap:8px!important}.film .first-actions>.btn{flex:1 1 0!important;min-width:0!important;width:auto!important}}
+@media(max-width:799px){.film .cap{top:calc(var(--maria-header) + max(200px,28svh) + 34px)!important}.film .first-actions{flex-wrap:wrap!important}.film .first-actions>.btn{flex:1 1 calc(50% - 4px)!important}.film .first-actions>.intro-more{flex:0 0 100%!important;width:100%!important;min-height:20px!important;height:auto!important;margin:0!important}}
+@media(max-width:799px){body[data-maria-slug=thecrookedman10] .film .cap{top:calc(var(--maria-header) + (100vw - 36px)*.75 + 34px)!important}}

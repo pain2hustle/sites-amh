@@ -89,7 +89,8 @@
       known.add(destination.url);
       destinations.set(anchor, destination);
       // Context-menu Open in new tab/window and copied links also stay first-party until confirmed.
-      anchor.setAttribute('href', guardedURL(destination.url));
+      const guarded = guardedURL(destination.url);
+      if (anchor.getAttribute('href') !== guarded) anchor.setAttribute('href', guarded);
     }
     const previous = destinations.get(anchor);
     if (previous) {
