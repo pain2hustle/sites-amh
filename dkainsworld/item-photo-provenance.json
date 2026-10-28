@@ -1,0 +1,92 @@
+{
+  "site": "DKAINSWORLD",
+  "provenance": "Original item screenshots supplied by the site owner for public site use. Original bytes preserved. No new rights or license asserted.",
+  "listings": [
+    {
+      "id": "jack-stands",
+      "title": "Performance Tool W41022 3-Ton Jack Stands",
+      "price_text": "Ask for prices",
+      "notes": "Pair pictured. Visible wear and chipped paint. Condition, operation and safety not independently verified. Screenshot price is historical source content, not the current offered price."
+    },
+    {
+      "id": "mixed-tools",
+      "title": "Mixed Tools, Wrenches and Sets",
+      "price_text": "Tools from $1 · Ask for prices",
+      "notes": "Owner reports different brands made in USA, Japan and Taiwan; SAE and metric; more stock than pictured; sockets, ratchets, extensions and tools for every trade. Prices vary by item. No precise stock count or individual price asserted."
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/items/jack-stands-1.jpg",
+      "source_filename": "1000020941.jpg",
+      "sha256": "3aa04e5ca5aa94f49df691f28e7926437c005ffdf2afaf0bbeaa43c4467694c9",
+      "bytes": 233306,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "85d1f8eea2bae0cac0b45589986a4e5e3b737ae4"
+    },
+    {
+      "path": "assets/items/jack-stands-2.jpg",
+      "source_filename": "1000020943.jpg",
+      "sha256": "4900a71b95ed4b027efd813f58286d17b0bad8daeb9e02ed0fafe0844672722e",
+      "bytes": 239201,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "67b141720355fbd85eff2119ba8589cf82a8e65b"
+    },
+    {
+      "path": "assets/items/jack-stands-3.jpg",
+      "source_filename": "1000020945.jpg",
+      "sha256": "c241f42885ef6b653c7ed64c34bfeda32db25ef0b373a0562319ab7c313526aa",
+      "bytes": 284368,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "7d29a59d16276ea266ab3770bff2b550c6cf0cda"
+    },
+    {
+      "path": "assets/items/jack-stands-4.jpg",
+      "source_filename": "1000020947.jpg",
+      "sha256": "3283b3bf496c72fbac6b47dfc9eadc27e7fa391201fbbd066aebad466bf1256b",
+      "bytes": 215681,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "b0aa5a5ceb8fb9a55955c02849300cb7ef7ad576"
+    },
+    {
+      "path": "assets/items/mixed-tools-1.jpg",
+      "source_filename": "1000020949.jpg",
+      "sha256": "07b049cc72761bb199838eb92cd8161f88139a4c829b76442306028251d22a9e",
+      "bytes": 411832,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "01f23a4b392eba6b644b4de011d3feaece2a4e10"
+    },
+    {
+      "path": "assets/items/mixed-tools-2.jpg",
+      "source_filename": "1000020951.jpg",
+      "sha256": "052686dd172dd4511e8106f39efdc630b79285f6926437d876061749b5717817",
+      "bytes": 276072,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "a237b93c8d856bc4ee26a4374a56a3496292d9f1"
+    },
+    {
+      "path": "assets/items/mixed-tools-3.jpg",
+      "source_filename": "1000020953.jpg",
+      "sha256": "f8b3896a496e54c3553e96ac8afc12db9e5ee5065de35bf4450c49b43d48d098",
+      "bytes": 283652,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "281d4d8ddd9e4a24a0795b9879627473e54210e0"
+    },
+    {
+      "path": "assets/items/mixed-tools-4.jpg",
+      "source_filename": "1000020955.jpg",
+      "sha256": "e1f1fe2625e37ec6b829af288a57e3a835151f46f71ad0920222172818160186",
+      "bytes": 265607,
+      "width": 955,
+      "height": 2048,
+      "blob_sha": "abfe909daea1c3c16eeb3bf56ef1fa8c8ac10a98"
+    }
+  ]
+}
