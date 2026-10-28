@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "html_routes": 135,
+  "sites": [
+    {
+      "slug": "jailyneojeda",
+      "html_routes": 56,
+      "headers_repaired": 56,
+      "files": 144,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "immapeaches",
+      "html_routes": 9,
+      "headers_repaired": 9,
+      "files": 42,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "annacowgirlbgo",
+      "html_routes": 9,
+      "headers_repaired": 9,
+      "files": 42,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "thecrookedman10",
+      "html_routes": 9,
+      "headers_repaired": 9,
+      "files": 42,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "pamela-yanez",
+      "html_routes": 9,
+      "headers_repaired": 9,
+      "files": 42,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "adina-y-flores",
+      "html_routes": 7,
+      "headers_repaired": 7,
+      "files": 40,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "dannyalvarez57",
+      "html_routes": 9,
+      "headers_repaired": 9,
+      "files": 42,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "allcapskat",
+      "html_routes": 9,
+      "headers_repaired": 9,
+      "files": 42,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "ashleytienda",
+      "html_routes": 2,
+      "headers_repaired": 1,
+      "files": 27,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "isatobaa",
+      "html_routes": 7,
+      "headers_repaired": 7,
+      "files": 44,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "graciebon",
+      "html_routes": 7,
+      "headers_repaired": 7,
+      "files": 50,
+      "content_and_script_preservation": true
+    },
+    {
+      "slug": "sherryforeign",
+      "html_routes": 2,
+      "headers_repaired": 1,
+      "files": 28,
+      "content_and_script_preservation": true
+    }
+  ],
+  "issues": [],
+  "browser_layout": "pending; file protocol rejected; no alternative transport attempted",
+  "published": false
+}

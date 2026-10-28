@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'creator-sites/jailyneojeda/site'
 MANIFEST = ROOT / 'creator-sites/jailyneojeda/manifest.json'
 OUTPUT = ROOT / '_jailyne_site'
-MANIFEST_SHA256 = '0a58d6e47ef6f1db7d32d155e2563dc7c285417827e508287c885fb1f47d8433'
-EXPECTED_FILES = 143
+MANIFEST_SHA256 = 'bc4c2c0d80bfe78dcd157433baef7602217017986c80540dde08d7966e01ed9c'
+EXPECTED_FILES = 144
 EXPECTED_HTML = 56
 HOST = 'https://jailyneojeda.pages.dev'
 
