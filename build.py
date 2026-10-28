@@ -1,156 +1,118 @@
 #!/usr/bin/env python3
-"""Validate the exact current242 base, then add the reviewed isolated directories.
-No networking or deployment. Never deletes or rebases an existing business file.
-"""
-from pathlib import Path, PurePosixPath
+"""Export the exact existing directory, then a reviewed additive business release."""
+from pathlib import Path
 from html.parser import HTMLParser
-import argparse, hashlib, json, os, stat, sys, tempfile, types, zipfile
-BASE_BUILDER_SHA256 = '48b61557356fc64cc3d8fd11822953ec0962855aec2d236a056d7dda9aad9cf1'
-BASE_MANIFEST_SHA256 = '29239835f2f409c7d5da0de342d9df0c5226228d87629b8da0ced35af0864b7e'
-OVERLAY_MANIFEST_SHA256 = '19068241275c8f2def7136164eb25555445992b2ca2190369a1d45812a4f49cd'
-PUBLIC_PATHS = ('business/batch3/assets/552679e514b47b7128b70f702860a3ac3d222e359cfbd7a18d143bf710a66006.js', 'business/batch3/assets/62d1cd86764de90e9e012f970f294585f1c311a67f2c89b91fc5edb464134698.js', 'business/batch3/assets/80e7702d22c9fae045435197ea48fcc29cb16beb11101f1c26548143c0dac864.js', 'business/batch3/assets/aa1f88785d7efd00ae91a838f82de2b256cf903d9ff8b69d78b9451c277ccdb8.css', 'business/batch3/canela-caf-santa-maria-ca-batch3-v1-preview/assets/brand/favicon.svg', 'business/batch3/canela-caf-santa-maria-ca-batch3-v1-preview/assets/brand/wordmark.svg', 'business/batch3/canela-caf-santa-maria-ca-batch3-v1-preview/index.html', 'business/batch3/canela-caf-santa-maria-ca-batch3-v1-preview/privacy/index.html', 'business/batch3/canela-caf-santa-maria-ca-batch3-v1-preview/terms/index.html', 'business/batch3/crescendo-espresso-bar-coffee-roasters-madison-wi-batch3-v2-preview/assets/brand/favicon.svg', 'business/batch3/crescendo-espresso-bar-coffee-roasters-madison-wi-batch3-v2-preview/assets/brand/wordmark.svg', 'business/batch3/crescendo-espresso-bar-coffee-roasters-madison-wi-batch3-v2-preview/index.html', 'business/batch3/crescendo-espresso-bar-coffee-roasters-madison-wi-batch3-v2-preview/privacy/index.html', 'business/batch3/crescendo-espresso-bar-coffee-roasters-madison-wi-batch3-v2-preview/terms/index.html', 'business/batch3/daily-brew-coffee-house-bakery-roastery-riverside-ca-batch3-wave11-v1-preview/assets/brand/favicon.svg', 'business/batch3/daily-brew-coffee-house-bakery-roastery-riverside-ca-batch3-wave11-v1-preview/assets/brand/wordmark.svg', 'business/batch3/daily-brew-coffee-house-bakery-roastery-riverside-ca-batch3-wave11-v1-preview/index.html', 'business/batch3/daily-brew-coffee-house-bakery-roastery-riverside-ca-batch3-wave11-v1-preview/privacy/index.html', 'business/batch3/daily-brew-coffee-house-bakery-roastery-riverside-ca-batch3-wave11-v1-preview/terms/index.html', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/apple-touch-icon.png', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/favicon.ico', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/icon-192.png', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/icon-256.png', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/icon-512.png', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/mark.png', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/preview.jpg', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/brand/wordmark.png', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/rl-extras.js', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/assets/site.webmanifest', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/index.html', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/robots.txt', 'business/batch3/modesto-barber-co-modesto-ca-batch3-amh/sw.js', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/apple-touch-icon.png', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/favicon.ico', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/icon-192.png', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/icon-256.png', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/icon-512.png', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/mark.png', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/preview.jpg', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/brand/wordmark.png', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/rl-extras.js', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/assets/site.webmanifest', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/index.html', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/robots.txt', 'business/batch3/new-era-barber-studio-ruskin-fl-batch3-amh/sw.js', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/apple-touch-icon.png', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/favicon.ico', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/icon-192.png', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/icon-256.png', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/icon-512.png', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/mark.png', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/preview.jpg', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/brand/wordmark.png', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/rl-extras.js', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/assets/site.webmanifest', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/index.html', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/robots.txt', 'business/batch3/rienvally-thebarber-at-his-touch-barbershop-bakersfield-ca-batch3-amh/sw.js', 'creators/catalog/creators.json', 'creators/catalog/videos/CG-02bfce5f67319438.json', 'creators/catalog/videos/CG-034fc93e2a4cd96b.json', 'creators/catalog/videos/CG-04650bf54e235a31.json', 'creators/catalog/videos/CG-049f618e5cc68e2f.json', 'creators/catalog/videos/CG-051c45435addf00e.json', 'creators/catalog/videos/CG-0720ebbe61c3b03a.json', 'creators/catalog/videos/CG-073840b20a34b0a7.json', 'creators/catalog/videos/CG-07a5346ff0ee0ab1.json', 'creators/catalog/videos/CG-0853eb5ebe928b69.json', 'creators/catalog/videos/CG-098fd7ac99aad9f9.json', 'creators/catalog/videos/CG-0a1f0f7468ac7ca0.json', 'creators/catalog/videos/CG-0a84fa374c8590fa.json', 'creators/catalog/videos/CG-0a9caf7ef5989f6e.json', 'creators/catalog/videos/CG-0af828ee658873b1.json', 'creators/catalog/videos/CG-0bdafb7fefdefb95.json', 'creators/catalog/videos/CG-0c0639f6b16e0cc7.json', 'creators/catalog/videos/CG-0c757211136c3b1c.json', 'creators/catalog/videos/CG-0ccb084a428866da.json', 'creators/catalog/videos/CG-0de062a92cf41d11.json', 'creators/catalog/videos/CG-0e051420aefa2c22.json', 'creators/catalog/videos/CG-0f704626eac90706.json', 'creators/catalog/videos/CG-0fd4228f9ef7f684.json', 'creators/catalog/videos/CG-10c3b565e7cff84c.json', 'creators/catalog/videos/CG-1256a89244ae573c.json', 'creators/catalog/videos/CG-128a2e042c3e9d4e.json', 'creators/catalog/videos/CG-12b4dd7e83b8420a.json', 'creators/catalog/videos/CG-14263a04de38b080.json', 'creators/catalog/videos/CG-15434b5090858c63.json', 'creators/catalog/videos/CG-15624e3e70f0642a.json', 'creators/catalog/videos/CG-157ad202942e87c3.json', 'creators/catalog/videos/CG-16afbb488654bab5.json', 'creators/catalog/videos/CG-1835be4aceeb8391.json', 'creators/catalog/videos/CG-183b5463b78c7dae.json', 'creators/catalog/videos/CG-188a014c4a293f1a.json', 'creators/catalog/videos/CG-18b8dd7edee64707.json', 'creators/catalog/videos/CG-18c629e8fa34120f.json', 'creators/catalog/videos/CG-19397a6802858e69.json', 'creators/catalog/videos/CG-1b331a3271e88aba.json', 'creators/catalog/videos/CG-1b584b987742eb49.json', 'creators/catalog/videos/CG-1bdc8cd70883c909.json', 'creators/catalog/videos/CG-1ee603b00405309a.json', 'creators/catalog/videos/CG-1ffb0edbe8d01575.json', 'creators/catalog/videos/CG-206d878c5b6cd6d1.json', 'creators/catalog/videos/CG-20d5b04f7cfcfb67.json', 'creators/catalog/videos/CG-23a25551a1fe0bb7.json', 'creators/catalog/videos/CG-23ed471677775bf2.json', 'creators/catalog/videos/CG-245813aebe287cf7.json', 'creators/catalog/videos/CG-249b2bc36ede7fef.json', 'creators/catalog/videos/CG-24bc5b3d68252947.json', 'creators/catalog/videos/CG-25bb1c6a0f670fae.json', 'creators/catalog/videos/CG-2674be64c6eac9c6.json', 'creators/catalog/videos/CG-273808da4412a1ee.json', 'creators/catalog/videos/CG-286d1717ccfa2172.json', 'creators/catalog/videos/CG-2898dbeb64f76dbc.json', 'creators/catalog/videos/CG-293f5af727e08984.json', 'creators/catalog/videos/CG-299a0d79f76563d3.json', 'creators/catalog/videos/CG-2ac7629bc8077709.json', 'creators/catalog/videos/CG-2bbd99737c247331.json', 'creators/catalog/videos/CG-2bcd9d421ad7cc3b.json', 'creators/catalog/videos/CG-2be04af559962658.json', 'creators/catalog/videos/CG-2ca2518cdf815acc.json', 'creators/catalog/videos/CG-2dc16503aaf470ff.json', 'creators/catalog/videos/CG-30089031aa4d8225.json', 'creators/catalog/videos/CG-3342d55de6b76a60.json', 'creators/catalog/videos/CG-343fe1463a7631d6.json', 'creators/catalog/videos/CG-34bb5927a21d8441.json', 'creators/catalog/videos/CG-3610afe805c2dd19.json', 'creators/catalog/videos/CG-389345ee12d4227b.json', 'creators/catalog/videos/CG-3949d1531ca7d0b3.json', 'creators/catalog/videos/CG-3a199ff6e7b81e3d.json', 'creators/catalog/videos/CG-3b9ef152fd6ec673.json', 'creators/catalog/videos/CG-3c2cd66044e8146a.json', 'creators/catalog/videos/CG-3c4dcaf6ba11ba37.json', 'creators/catalog/videos/CG-3e541404d81d3811.json', 'creators/catalog/videos/CG-3e5ee72a3d9cecd3.json', 'creators/catalog/videos/CG-3ed27c679f112c11.json', 'creators/catalog/videos/CG-3f6ea0a679126c14.json', 'creators/catalog/videos/CG-417f29f2da14dca1.json', 'creators/catalog/videos/CG-41b1ab1c026e977b.json', 'creators/catalog/videos/CG-42730cc2836794bd.json', 'creators/catalog/videos/CG-427c1eebe2150bdc.json', 'creators/catalog/videos/CG-44aeab0372249a26.json', 'creators/catalog/videos/CG-44b63c8c979a6f27.json', 'creators/catalog/videos/CG-44ce11cf4bb99fda.json', 'creators/catalog/videos/CG-44f8f49604d1c1b6.json', 'creators/catalog/videos/CG-45c5ce4a4afd9b0b.json', 'creators/catalog/videos/CG-4688c9cc39831219.json', 'creators/catalog/videos/CG-47405aa46d73fde3.json', 'creators/catalog/videos/CG-48501a234d5202c1.json', 'creators/catalog/videos/CG-487f5a85adec8cc9.json', 'creators/catalog/videos/CG-49ac1d5603d09788.json', 'creators/catalog/videos/CG-4ca582e56fd13b75.json', 'creators/catalog/videos/CG-4cbd475ee0539cb0.json', 'creators/catalog/videos/CG-4d2775c8557bf344.json', 'creators/catalog/videos/CG-4d3d3d83a5a16e6f.json', 'creators/catalog/videos/CG-4dba74382ae946fd.json', 'creators/catalog/videos/CG-4f7e6d5c223b4c89.json', 'creators/catalog/videos/CG-51597fb227329694.json', 'creators/catalog/videos/CG-51f39b6b1017adaa.json', 'creators/catalog/videos/CG-521df11870353a8d.json', 'creators/catalog/videos/CG-529d4535ac967a2b.json', 'creators/catalog/videos/CG-52feaaadb7f9d635.json', 'creators/catalog/videos/CG-55f606cf253f8fe0.json', 'creators/catalog/videos/CG-5668770551676443.json', 'creators/catalog/videos/CG-567543acbb1dabcf.json', 'creators/catalog/videos/CG-57aedc947440d8fe.json', 'creators/catalog/videos/CG-581653fccbf9b715.json', 'creators/catalog/videos/CG-5840ad47b519373c.json', 'creators/catalog/videos/CG-58499b7b3acdfa71.json', 'creators/catalog/videos/CG-585873e76458a068.json', 'creators/catalog/videos/CG-59d93be4146c543e.json', 'creators/catalog/videos/CG-5a3926dc1cee5300.json', 'creators/catalog/videos/CG-5a91db8a25f005f8.json', 'creators/catalog/videos/CG-5cc8ef01a6b6a443.json', 'creators/catalog/videos/CG-5d480e165c65d241.json', 'creators/catalog/videos/CG-5e608a21dd99cd3c.json', 'creators/catalog/videos/CG-5e778a2be2b0e337.json', 'creators/catalog/videos/CG-5e9ef31b0626555e.json', 'creators/catalog/videos/CG-6084262638cef26a.json', 'creators/catalog/videos/CG-6199c64f90d19de6.json', 'creators/catalog/videos/CG-61f65abeb0280fc2.json', 'creators/catalog/videos/CG-6216eb620ff532a2.json', 'creators/catalog/videos/CG-62e653b388f76189.json', 'creators/catalog/videos/CG-63061958ccdad842.json', 'creators/catalog/videos/CG-6319b74ef1153109.json', 'creators/catalog/videos/CG-63a1267cfb18cf3b.json', 'creators/catalog/videos/CG-6493261b8267c00f.json', 'creators/catalog/videos/CG-6507c0e650fa0c10.json', 'creators/catalog/videos/CG-653d134da8cfa2f1.json', 'creators/catalog/videos/CG-6561045d02d0e6f3.json', 'creators/catalog/videos/CG-65ec5e256f0affe5.json', 'creators/catalog/videos/CG-6688f20f28ac3093.json', 'creators/catalog/videos/CG-668acb6648500ae9.json', 'creators/catalog/videos/CG-6a68e5725affc2e6.json', 'creators/catalog/videos/CG-6a9a7a0b340cfbc4.json', 'creators/catalog/videos/CG-6b15b197582f488e.json', 'creators/catalog/videos/CG-6c1c6c2527007fe6.json', 'creators/catalog/videos/CG-6d0ccdb0eda2e48e.json', 'creators/catalog/videos/CG-6d39ef068fef6e45.json', 'creators/catalog/videos/CG-6ed09e05d969a4b9.json', 'creators/catalog/videos/CG-6f74cb1c4f307e5e.json', 'creators/catalog/videos/CG-706f23c878813661.json', 'creators/catalog/videos/CG-7090c3555b762a8f.json', 'creators/catalog/videos/CG-716aea8fac204009.json', 'creators/catalog/videos/CG-7300f05fc06c5d63.json', 'creators/catalog/videos/CG-739ace0cd000fa64.json', 'creators/catalog/videos/CG-75436588ef089e65.json', 'creators/catalog/videos/CG-78be4109737e7b4b.json', 'creators/catalog/videos/CG-792f6e72d22b40d9.json', 'creators/catalog/videos/CG-7f3d1718c2593904.json', 'creators/catalog/videos/CG-8143ed23dcdaecec.json', 'creators/catalog/videos/CG-81b8998cc4e12f88.json', 'creators/catalog/videos/CG-82b1ae44c9cc2248.json', 'creators/catalog/videos/CG-82dae4a809e10ef1.json', 'creators/catalog/videos/CG-837665e6213a59fa.json', 'creators/catalog/videos/CG-844287c2c9df7b29.json', 'creators/catalog/videos/CG-8708383e89918621.json', 'creators/catalog/videos/CG-87ca6cf7efa23140.json', 'creators/catalog/videos/CG-8899ba8c034920d0.json', 'creators/catalog/videos/CG-8901e0eae7d7e251.json', 'creators/catalog/videos/CG-8aeee7553b56df0e.json', 'creators/catalog/videos/CG-8c7ec148049d692b.json', 'creators/catalog/videos/CG-8e02189d651ef7b8.json', 'creators/catalog/videos/CG-8e599ed3d620142f.json', 'creators/catalog/videos/CG-8e9b94a8006ba99c.json', 'creators/catalog/videos/CG-8f1760964c997946.json', 'creators/catalog/videos/CG-8f3a7fcfbacb9d32.json', 'creators/catalog/videos/CG-8f51d385cfeb2ce5.json', 'creators/catalog/videos/CG-8f8d82a47400e90c.json', 'creators/catalog/videos/CG-8fe68b1c8eb40a90.json', 'creators/catalog/videos/CG-910949f13d27f61a.json', 'creators/catalog/videos/CG-91fab8a96f39a15f.json', 'creators/catalog/videos/CG-925fb8dbaf5a3b99.json', 'creators/catalog/videos/CG-92ef7ddeec672bc5.json', 'creators/catalog/videos/CG-934c50996917470f.json', 'creators/catalog/videos/CG-9389119f93191849.json', 'creators/catalog/videos/CG-9456263190c28ea1.json', 'creators/catalog/videos/CG-993972f488735cdd.json', 'creators/catalog/videos/CG-997d72be9b4a71af.json', 'creators/catalog/videos/CG-999a147bba6f40a8.json', 'creators/catalog/videos/CG-9c65e42226d3da73.json', 'creators/catalog/videos/CG-9e7ebde363b50491.json', 'creators/catalog/videos/CG-9edc038c50bf43c5.json', 'creators/catalog/videos/CG-9ef186a5f8745192.json', 'creators/catalog/videos/CG-9fc4bdf654d34406.json', 'creators/catalog/videos/CG-a16caa05197e6734.json', 'creators/catalog/videos/CG-a1791fa626f38597.json', 'creators/catalog/videos/CG-a25816e084e0633a.json', 'creators/catalog/videos/CG-a37d2a5da216c069.json', 'creators/catalog/videos/CG-a38fb4ebfd4e3836.json', 'creators/catalog/videos/CG-a514f2e55b4356d0.json', 'creators/catalog/videos/CG-a534454a1362bc5f.json', 'creators/catalog/videos/CG-a54f2d15fef78bb0.json', 'creators/catalog/videos/CG-a5998cb0dcf4f927.json', 'creators/catalog/videos/CG-a5f2e8b54b9e09a1.json', 'creators/catalog/videos/CG-a8bf3daf95d1656e.json', 'creators/catalog/videos/CG-a9c46a7a9dc6f0cf.json', 'creators/catalog/videos/CG-aa1992ca109512ba.json', 'creators/catalog/videos/CG-ab3db994c9081f40.json', 'creators/catalog/videos/CG-ad24b7cf396e0acb.json', 'creators/catalog/videos/CG-ad4bc75a07300567.json', 'creators/catalog/videos/CG-ae4fbf4965afd254.json', 'creators/catalog/videos/CG-af62ec16b6a2a47d.json', 'creators/catalog/videos/CG-b10f1b67c1fb1ed0.json', 'creators/catalog/videos/CG-b11dfcc97d8da3f9.json', 'creators/catalog/videos/CG-b1a592bc3c763949.json', 'creators/catalog/videos/CG-b344ac8874b7dafd.json', 'creators/catalog/videos/CG-b5a234e74f207cae.json', 'creators/catalog/videos/CG-b5e6bba1933cb7b2.json', 'creators/catalog/videos/CG-b6ead05daceb906d.json', 'creators/catalog/videos/CG-b9011dbc3eaec6d4.json', 'creators/catalog/videos/CG-ba639bc99f4ae3aa.json', 'creators/catalog/videos/CG-ba696a9bb9a240de.json', 'creators/catalog/videos/CG-bb3fdcd69c4bd833.json', 'creators/catalog/videos/CG-bb4d8aec39568171.json', 'creators/catalog/videos/CG-bb96fb3ff77d3905.json', 'creators/catalog/videos/CG-bbf07bea0dfaf322.json', 'creators/catalog/videos/CG-bd9335056d111da1.json', 'creators/catalog/videos/CG-bee6f0fe086f8687.json', 'creators/catalog/videos/CG-bf592a6e7d1880c6.json', 'creators/catalog/videos/CG-c0b7fa9e70ad9fbf.json', 'creators/catalog/videos/CG-c1b1d1858bfc136d.json', 'creators/catalog/videos/CG-c37d4bfc58001a50.json', 'creators/catalog/videos/CG-c394feab8bdc468b.json', 'creators/catalog/videos/CG-c4fe9d8a01d6437a.json', 'creators/catalog/videos/CG-c6387cd3e6546100.json', 'creators/catalog/videos/CG-c7b46713f2f6e13f.json', 'creators/catalog/videos/CG-cac4ba5dfc7a1f9b.json', 'creators/catalog/videos/CG-cc535cfc7280381f.json', 'creators/catalog/videos/CG-cc96b166272f6f7d.json', 'creators/catalog/videos/CG-cd1bb392be8f502b.json', 'creators/catalog/videos/CG-cd444d9985b22251.json', 'creators/catalog/videos/CG-ce042aa148e85c28.json', 'creators/catalog/videos/CG-ce7d8c9f876c7faf.json', 'creators/catalog/videos/CG-cf476d9ea1e10b76.json', 'creators/catalog/videos/CG-cf5de88da0576780.json', 'creators/catalog/videos/CG-cf92a0a49683b507.json', 'creators/catalog/videos/CG-d05b48e49c5724e8.json', 'creators/catalog/videos/CG-d0eeb20905e1a6b1.json', 'creators/catalog/videos/CG-d4e45ce37e6bbd4e.json', 'creators/catalog/videos/CG-d53d682d49a27bad.json', 'creators/catalog/videos/CG-d57b186ea9c60e78.json', 'creators/catalog/videos/CG-d731744256c81eb4.json', 'creators/catalog/videos/CG-d81cf6f5b153ff94.json', 'creators/catalog/videos/CG-d856ac8dfccfdb9a.json', 'creators/catalog/videos/CG-d897dcd100322889.json', 'creators/catalog/videos/CG-d9849d40ce8e1e78.json', 'creators/catalog/videos/CG-dd278fbf8417b795.json', 'creators/catalog/videos/CG-dda21aa0173a09c3.json', 'creators/catalog/videos/CG-de5bba0726df1582.json', 'creators/catalog/videos/CG-e137c1e68bd91a4c.json', 'creators/catalog/videos/CG-e181a74c944f5c50.json', 'creators/catalog/videos/CG-e1bc88ae026f1d9e.json', 'creators/catalog/videos/CG-e1e06269c0432495.json', 'creators/catalog/videos/CG-e1f0a4c00f973a39.json', 'creators/catalog/videos/CG-e33bce4bb99d634f.json', 'creators/catalog/videos/CG-e4bb212672df6b5d.json', 'creators/catalog/videos/CG-e502b2307b198662.json', 'creators/catalog/videos/CG-e702a072e8468ce3.json', 'creators/catalog/videos/CG-e7d153cd6070ee6a.json', 'creators/catalog/videos/CG-e84f3196a5e02166.json', 'creators/catalog/videos/CG-e87250547e79b374.json', 'creators/catalog/videos/CG-e88ccb4cf4114302.json', 'creators/catalog/videos/CG-e9a7b816540348a9.json', 'creators/catalog/videos/CG-eb3e12295764bf28.json', 'creators/catalog/videos/CG-ebc2219b0906d8ec.json', 'creators/catalog/videos/CG-ec69c76ec32b8b5b.json', 'creators/catalog/videos/CG-ed4b369ba4ddfaab.json', 'creators/catalog/videos/CG-ed979c7abc62f5fe.json', 'creators/catalog/videos/CG-edea10c8abff1574.json', 'creators/catalog/videos/CG-ee267d815ec95d97.json', 'creators/catalog/videos/CG-ef604c5fc37a821d.json', 'creators/catalog/videos/CG-effb513c637366ca.json', 'creators/catalog/videos/CG-f02ffd02050d0591.json', 'creators/catalog/videos/CG-f056c74a8ef5ff7c.json', 'creators/catalog/videos/CG-f15b94809ede4114.json', 'creators/catalog/videos/CG-f1ccbaafbb7f4d1e.json', 'creators/catalog/videos/CG-f1e9a40890cd0773.json', 'creators/catalog/videos/CG-f205b9e4ab89fabc.json', 'creators/catalog/videos/CG-f2329836f592be8d.json', 'creators/catalog/videos/CG-f2cc9e7dc26ab144.json', 'creators/catalog/videos/CG-f302660509e9ae14.json', 'creators/catalog/videos/CG-f30f99d1c9fb158d.json', 'creators/catalog/videos/CG-f3b9ce16e2d8b2b8.json', 'creators/catalog/videos/CG-f4133960ebdd4ba6.json', 'creators/catalog/videos/CG-f5045aab8870acd6.json', 'creators/catalog/videos/CG-f5503bb3f3313ced.json', 'creators/catalog/videos/CG-f5ceb4c0b467446b.json', 'creators/catalog/videos/CG-f681165869cecc01.json', 'creators/catalog/videos/CG-f978341fd07cff02.json', 'creators/catalog/videos/CG-fe183e83682e9167.json', 'creators/catalog/videos/CG-ff6c2b55b809d9f3.json', 'creators/index.html', 'creators/sites.json', 'directory/businesses.json', 'index.html')
-FINAL_FILE_COUNT = 3391
-MAX_ARCHIVE_BYTES = 8*1024*1024
-MAX_FILE_BYTES = 10_000_000
-MAX_TOTAL_BYTES = 900_000_000
-ORIGIN = 'https://sites-amh.pages.dev'
+import argparse,hashlib,importlib.util,json,os,stat,tempfile,zipfile
 
-def need(ok, message):
-    if not ok:raise ValueError(message)
-def digest(data):return hashlib.sha256(data).hexdigest()
-def strict_object(pairs):
-    d={}
-    for k,v in pairs:
-        need(k not in d,'Duplicate JSON key');d[k]=v
-    return d
-def integer(n):return type(n)is int and n>=0
-def safe_path(value):
-    p=Path(value)
-    need('..'not in p.parts,'Parent traversal filesystem path rejected')
-    p=p.absolute();need(not any(x.is_symlink()for x in (p,*p.parents)),'Symlink path/ancestor rejected')
-    return p.resolve(strict=False)
-def regular(path):
-    p=safe_path(path);need(p.is_file(),'Regular file required: '+str(path));return p
-def read_pinned(path, expected):
-    b=regular(path).read_bytes();need(digest(b)==expected,'Exact input pin mismatch: '+str(path));return b
-def safe_name(name):
-    return type(name)is str and bool(name) and '\\'not in name and ':'not in name and not name.startswith('/')and PurePosixPath(name).as_posix()==name and all(x not in ('','.','..')for x in name.split('/'))
-def records(rows):
-    need(type(rows)is list,'File inventory must be a list');out={}
-    for r in rows:
-        need(type(r)is dict and set(r)=={'path','size','sha256'},'Exact file record schema')
-        p=r['path'];h=r['sha256'];need(safe_name(p)and p not in out,'Unsafe/duplicate file path')
-        need(integer(r['size'])and r['size']<=MAX_FILE_BYTES and type(h)is str and len(h)==64 and all(c in '0123456789abcdef'for c in h),'Invalid file size/hash')
-        out[p]=r
-    return out
+FROZEN_BUILDER_SHA256='25d0648d94b07bccbc335543bb74824be0c46b8877346eda58e004e6a8f26a79'
+RELEASE_MANIFEST_SHA256='6b9c5a1b2ee4a75e99254890c4918c8084a950b0f1700acb563afd3dc10e0968'
+ORIGIN='https://sites-amh.pages.dev'
+PREFIX='business/batch3/'
+EXPECTED_NEW=290
+EXPECTED_BUSINESSES=3489
+MAX_PACK_BYTES=8*1024*1024
+MAX_FILE_BYTES=10_000_000
+MAX_TOTAL_BYTES=900_000_000
 
+def need(ok,msg):
+ if not ok:raise ValueError(msg)
+def sha(b):return hashlib.sha256(b).hexdigest()
+def strict(pairs):
+ d={}
+ for k,v in pairs:
+  need(k not in d,'Duplicate JSON key');d[k]=v
+ return d
+def safe_path(p):
+ p=Path(p);need('..'not in p.parts,'Parent traversal');p=p.absolute()
+ need(not any(x.is_symlink()for x in(p,*p.parents)),'Symlink input/output path')
+ return p.resolve(strict=False)
+def pinned(p,h):
+ p=safe_path(p);need(p.is_file(),'Regular pinned file required');b=p.read_bytes();need(sha(b)==h,'Exact input pin mismatch: '+str(p));return b
 def load_inputs(repo):
-    repo=safe_path(repo);overlay=safe_path(repo/'directory-overlay');need(overlay.is_dir(),'Overlay folder missing')
-    need({p.name for p in overlay.iterdir()}=={'manifest.json','directory.zip'},'Exact overlay input membership')
-    basecode=read_pinned(repo/'build_base242.py',BASE_BUILDER_SHA256)
-    baseraw=read_pinned(repo/'packs/packs.json',BASE_MANIFEST_SHA256);base=json.loads(baseraw,object_pairs_hook=strict_object)
-    raw=read_pinned(overlay/'manifest.json',OVERLAY_MANIFEST_SHA256);m=json.loads(raw,object_pairs_hook=strict_object)
-    need(type(m)is dict and set(m)=={'format','profile','origin','base','archive','overlay_files','file_count','total_bytes','files','business_records','creator_records'},'Overlay manifest schema')
-    need(type(m['format'])is int and m['format']==1 and m['profile']=='master-directory-business3199-creator3386-catalog998-batch3-r1'and m['origin']==ORIGIN,'Exact directory profile')
-    need(m['base']=={'source_commit':'d7e7938d68ddce8dcddcc86590d42f8cce27fc39','builder_sha256':BASE_BUILDER_SHA256,'manifest_sha256':BASE_MANIFEST_SHA256,'file_count':3037,'total_bytes':90281874,'root_index_sha256':'0df4125f86f0c0298d70994676cadb5db00222efdb8cbccf8a8cd011c717afdb'},'Exact current still-fixed base required')
-    need(type(m['file_count'])is int and m['file_count']==FINAL_FILE_COUNT and FINAL_FILE_COUNT<=20000,'Exact combined file count/cap')
-    need(integer(m['total_bytes'])and m['total_bytes']<=MAX_TOTAL_BYTES,'Combined byte cap')
-    need(type(m['business_records'])is int and m['business_records']==3199 and type(m['creator_records'])is int and m['creator_records']==3386,'Exact reviewed directory counts')
-    bf=records(base['files']);of=records(m['overlay_files']);final=records(m['files'])
-    need(base['file_count']==3037 and len(bf)==3037 and base['total_bytes']==90281874,'Exact base inventory')
-    need(tuple(sorted(of))==PUBLIC_PATHS and set(of)&set(bf)=={'index.html'},'Only root index replacement and three new paths')
-    combined=dict(bf);combined.update(of);need(final==combined and len(final)==FINAL_FILE_COUNT and sum(r['size']for r in final.values())==m['total_bytes'],'Exact unchanged-base plus four-file union')
-    a=m['archive'];need(type(a)is dict and set(a)=={'name','size','sha256'}and a['name']=='directory.zip'and integer(a['size'])and 0<a['size']<MAX_ARCHIVE_BYTES,'Exact archive metadata')
-    zpath=regular(overlay/a['name']);need(zpath.stat().st_size==a['size'],'Archive byte size');read_pinned(zpath,a['sha256'])
-    data={}
-    with zipfile.ZipFile(zpath)as z:
-        for info in z.infolist():
-            name=info.filename;need(name in of and name not in data and safe_name(name),'Unexpected/duplicate ZIP member')
-            need(not info.is_dir()and stat.S_IFMT(info.external_attr>>16)==stat.S_IFREG and not info.flag_bits&1 and info.compress_type in (zipfile.ZIP_STORED,zipfile.ZIP_DEFLATED),'ZIP path/type/encryption/compression rejected')
-            r=of[name];need(info.file_size==r['size'],'ZIP declared size mismatch')
-            with z.open(info)as stream:b=stream.read(r['size']+1)
-            need(len(b)==r['size']and digest(b)==r['sha256'],'ZIP content mismatch');data[name]=b
-    need(set(data)==set(PUBLIC_PATHS),'Four overlay members required')
-    validate_directory_data(data)
-    return repo,basecode,base,m,bf,of,final,data
+ repo=safe_path(repo)
+ code=pinned(repo/'build_directory3199.py',FROZEN_BUILDER_SHA256)
+ spec=importlib.util.spec_from_file_location('_exact_directory3199',repo/'build_directory3199.py')
+ base=importlib.util.module_from_spec(spec);exec(compile(code,str(repo/'build_directory3199.py'),'exec'),base.__dict__)
+ old=base.load_inputs(repo);oldfiles=old[6];olddata=old[7]
+ raw=pinned(repo/'business-release/manifest.json',RELEASE_MANIFEST_SHA256);m=json.loads(raw,object_pairs_hook=strict)
+ need(set(m)=={'format','profile','origin','namespace','base_commit','base_builder_sha256','base_manifest_sha256','new_routes','business_records','creator_records','packs','release_files','files','file_count','total_bytes'},'Exact release manifest schema')
+ need(m['format']==1 and type(m['format'])is int and m['profile']=='batch3-remaining290-business3489-v1'and m['origin']==ORIGIN and m['namespace']==PREFIX,'Exact reviewed release profile')
+ need(m['base_commit']=='81a1d8a661795db7c1000ccc4454c860307719bc'and m['base_builder_sha256']==FROZEN_BUILDER_SHA256 and m['base_manifest_sha256']==base.OVERLAY_MANIFEST_SHA256,'Exact unchanged directory base')
+ need(m['business_records']==EXPECTED_BUSINESSES and m['creator_records']==3386,'Reviewed record counts')
+ routes=m['new_routes'];need(type(routes)is list and len(routes)==len(set(routes))==EXPECTED_NEW,'Exact unique route count')
+ need(all(type(x)is str and x and all(c in 'abcdefghijklmnopqrstuvwxyz0123456789-'for c in x)for x in routes),'Unsafe route')
+ release=base.records(m['release_files']);final=base.records(m['files'])
+ need(set(release)&set(oldfiles)=={'index.html','directory/businesses.json'},'Only directory HTML/data can replace existing output')
+ need(all(x in('index.html','directory/businesses.json')or any(x.startswith(PREFIX+r+'/')for r in routes)for x in release),'Release outside reviewed business routes')
+ need(all(PREFIX+r+'/index.html'in release for r in routes),'Missing reviewed homepage')
+ combined=dict(oldfiles);combined.update(release)
+ need(final==combined and m['file_count']==len(final)<=20000 and sum(x['size']for x in final.values())==m['total_bytes']<=MAX_TOTAL_BYTES,'Exact unchanged base/release union')
+ packs=m['packs'];need(type(packs)is list and 0<len(packs)<=20,'Bounded pack list')
+ need({p.name for p in(repo/'business-release').iterdir()}=={'manifest.json',*(x['name']for x in packs)},'Exact release input membership')
+ data={};seenpacks=set()
+ for ix,a in enumerate(packs):
+  need(type(a)is dict and set(a)=={'name','size','sha256','members'}and a['name']==f'part-{ix:02d}.zip'and a['name']not in seenpacks,'Exact pack metadata/name')
+  seenpacks.add(a['name']);need(type(a['size'])is int and 0<a['size']<MAX_PACK_BYTES,'Pack byte cap')
+  need(type(a['members'])is list and len(a['members'])==len(set(a['members']))and all(x in release for x in a['members']),'Pack membership inventory')
+  zpath=safe_path(repo/'business-release'/a['name']);need(zpath.stat().st_size==a['size'],'Pack size mismatch');pinned(zpath,a['sha256'])
+  got=set()
+  with zipfile.ZipFile(zpath)as z:
+   for info in z.infolist():
+    name=info.filename;need(base.safe_name(name)and name in a['members']and name not in got and name not in data,'Unsafe/duplicate/unexpected ZIP member')
+    need(not info.is_dir()and stat.S_IFMT(info.external_attr>>16)==stat.S_IFREG and not info.flag_bits&1 and info.compress_type in(zipfile.ZIP_STORED,zipfile.ZIP_DEFLATED),'ZIP member type rejected')
+    r=release[name];need(info.file_size==r['size']<=MAX_FILE_BYTES,'ZIP declared size mismatch')
+    with z.open(info)as stream:b=stream.read(r['size']+1)
+    need(len(b)==r['size']and sha(b)==r['sha256'],'ZIP content mismatch');data[name]=b;got.add(name)
+  need(got==set(a['members']),'Incomplete pack')
+ need(set(data)==set(release),'Missing release files')
+ business=json.loads(data['directory/businesses.json'],object_pairs_hook=strict)
+ previous=json.loads(olddata['directory/businesses.json'],object_pairs_hook=strict)
+ rows=business['records'];need(len(rows)==EXPECTED_BUSINESSES and rows[:3199]==previous['records'],'Exact3199 prior records/URLs retained')
+ new=rows[3199:];need(len(new)==EXPECTED_NEW and len({x['id']for x in rows})==len(rows),'Unique record identities')
+ need({x['url']for x in new}=={ORIGIN+'/'+PREFIX+r+'/'for r in routes},'Exact added website URLs')
+ need(all(x['id'].startswith('business-')and x['category']in('barbers','restaurants')for x in rows),'Business-only directory')
+ text=data['index.html'].decode('utf-8');parser=base.DirectoryHTML();parser.feed(text)
+ need(parser.canonical==[ORIGIN+'/']and parser.og==[ORIGIN+'/']and parser.noindex,'Canonical/OG/noindex retained')
+ need(len(parser.record_ids)==len(set(parser.record_ids))==EXPECTED_BUSINESSES and set(parser.record_ids)=={r['id']for r in rows},'HTML/data identity equality')
+ need(not parser.external_scripts and '/creators/'not in text and 'creators/sites.json'not in text and 'creator-record-'not in text,'Business/creator separation and no new script dependency')
+ return repo,base,m,oldfiles,release,final,data
 
-class DirectoryHTML(HTMLParser):
-    def __init__(self):super().__init__();self.canonical=[];self.og=[];self.noindex=False;self.record_ids=[];self.external_scripts=[];self.external_resources=[]
-    def handle_starttag(self,tag,attrs):
-        a=dict(attrs)
-        if tag=='link'and a.get('rel')=='canonical':self.canonical.append(a.get('href'))
-        if tag=='meta'and a.get('property')=='og:url':self.og.append(a.get('content'))
-        if tag=='meta'and a.get('name','').lower()=='robots'and 'noindex'in a.get('content','').lower():self.noindex=True
-        if 'data-directory-record'in a:self.record_ids.append(a['data-directory-record'])
-        if tag=='script'and a.get('src'):self.external_scripts.append(a['src'])
-        for k in ('src','data-src','poster'):
-            if k in a:self.external_resources.append(a[k])
-def validate_directory_data(data):
-    business=json.loads(data['directory/businesses.json'],object_pairs_hook=strict_object)
-    creator=json.loads(data['creators/sites.json'],object_pairs_hook=strict_object)
-    need(len(business['records'])==3199 and len(creator['records'])==3386,'Data record count mismatch')
-    need(all(r['id'].startswith('business-')and r['category']in ('barbers','restaurants')for r in business['records']),'Business-only data required')
-    need(all(r['id'].startswith('creator-')for r in creator['records']),'Creator-only data required')
-    for path,db,count in [('index.html',business,3199),('creators/index.html',creator,3386)]:
-        text=data[path].decode('utf-8');p=DirectoryHTML();p.feed(text)
-        url=ORIGIN+'/'if path=='index.html'else ORIGIN+'/creators/'
-        need(p.canonical==[url]and p.og==[url]and p.noindex,'Exact canonical/og/noindex required')
-        need(len(p.record_ids)==len(set(p.record_ids))==count and set(p.record_ids)=={r['id']for r in db['records']},'HTML/data record identity mismatch')
-        need(not p.external_scripts,'No external script dependencies')
-        if path=='index.html':
-            need('/creators/'not in text and 'creators/sites.json'not in text and 'creator-record-'not in text,'Business root must not import/link/embed creator directory')
-            need(not any('/creators/'in x for x in p.external_resources),'No creator resources on business root')
-
-def inventory(root, expected):
-    found={};root=safe_path(root)
-    for p in root.rglob('*'):
-        safe_path(p)
-        if p.is_dir():continue
-        need(p.is_file(),'Nonregular output');name=p.relative_to(root).as_posix();need(name in expected,'Unexpected output file')
-        b=p.read_bytes();r=expected[name];need(len(b)==r['size']and digest(b)==r['sha256'],'Output byte mismatch: '+name);found[name]=r
-    need(set(found)==set(expected),'Output missing files');return found
-
-def run_build(repo, output):
-    repo=safe_path(repo);destination=safe_path(output)
-    need(not destination.exists()and destination.parent.is_dir(),'Fresh output with existing parent required')
-    need(destination!=repo and destination not in repo.parents and not repo.is_relative_to(destination),'Output cannot replace repository')
-    for protected in (repo/'packs',repo/'directory-overlay'):
-        need(not destination.is_relative_to(protected)and not protected.is_relative_to(destination),'Output overlaps inputs')
-    repo,basecode,base,m,bf,of,final,data=load_inputs(repo)
-    name='_reviewed_base242_for_directory';need(name not in sys.modules,'Base module name already in use')
-    module=types.ModuleType(name);module.__file__=str(repo/'build_base242.py');sys.modules[name]=module
-    try:
-        exec(compile(basecode,str(repo/'build_base242.py'),'exec'),module.__dict__)
-        with tempfile.TemporaryDirectory(prefix='.master-directory-build-',dir=destination.parent)as temp:
-            staged=Path(temp)/'public'
-            module.run_build(repo/'packs',staged) # Existing exact242 validator and exporter unchanged.
-            inventory(staged,bf)
-            for path,b in data.items():
-                target=staged/path;target.parent.mkdir(parents=True,exist_ok=True);safe_path(target)
-                if path=='index.html':target.unlink() # Only the reviewed staged root; original inputs untouched.
-                with os.fdopen(os.open(target,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o644),'wb')as f:f.write(b)
-            inventory(staged,final)
-            module.recheck_inputs((repo/'packs').resolve(),module.frozen_profile(),base)
-            read_pinned(repo/'build_base242.py',BASE_BUILDER_SHA256);read_pinned(repo/'directory-overlay/manifest.json',OVERLAY_MANIFEST_SHA256);read_pinned(repo/'directory-overlay/directory.zip',m['archive']['sha256'])
-            destination=safe_path(destination)
-            destination.mkdir(exist_ok=False) # Atomic no-overwrite reservation, even for an empty competing directory.
-            reserved=destination.stat()
-            try:
-                current=destination.lstat();need(stat.S_ISDIR(current.st_mode)and(current.st_dev,current.st_ino)==(reserved.st_dev,reserved.st_ino),'Output reservation changed')
-                os.rename(staged,destination) # Replaces only our own empty reserved directory.
-            except Exception:
-                try:
-                    current=destination.lstat()
-                    if stat.S_ISDIR(current.st_mode)and(current.st_dev,current.st_ino)==(reserved.st_dev,reserved.st_ino):destination.rmdir()
-                except OSError:pass # Never delete any competing nonempty output.
-                raise
-    finally:sys.modules.pop(name,None)
-    result={'files':len(final),'bytes':m['total_bytes'],'preserved_base_non_index_files':3036,'replaced_files':['index.html'],'added_files':['creators/index.html','creators/sites.json','directory/businesses.json'],'business_directory_records':3199,'separate_creator_records':3386,'base_business_homepages':242,'overlay_manifest_sha256':OVERLAY_MANIFEST_SHA256}
-    print(json.dumps(result,sort_keys=True));return result
+def run_build(repo,output):
+ repo=safe_path(repo);destination=safe_path(output)
+ need(not destination.exists()and destination.parent.is_dir(),'Fresh output required')
+ need(destination!=repo and destination not in repo.parents and not repo.is_relative_to(destination),'Output cannot replace repository')
+ for p in(repo/'packs',repo/'directory-overlay',repo/'business-release'):
+  need(not destination.is_relative_to(p)and not p.is_relative_to(destination),'Output overlaps input')
+ repo,base,m,oldfiles,release,final,data=load_inputs(repo)
+ with tempfile.TemporaryDirectory(prefix='.reviewed-business-release-',dir=destination.parent)as t:
+  staged=Path(t)/'public';base.run_build(repo,staged);base.inventory(staged,oldfiles)
+  for path,b in data.items():
+   target=staged/path;target.parent.mkdir(parents=True,exist_ok=True);safe_path(target)
+   if path in('index.html','directory/businesses.json'):target.unlink()
+   with os.fdopen(os.open(target,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o644),'wb')as f:f.write(b)
+  base.inventory(staged,final)
+  # Recheck every pinned input after export, including inherited base packs.
+  load_inputs(repo)
+  frozen=base.load_inputs(repo)
+  for pack in frozen[2]['packs']:
+   source=safe_path(repo/'packs'/pack['name'])
+   need(source.stat().st_size==pack['size'],'Inherited pack changed size')
+   pinned(source,pack['sha256'])
+  destination=safe_path(destination);destination.mkdir(exist_ok=False);reserved=destination.stat()
+  try:
+   current=destination.lstat();need(stat.S_ISDIR(current.st_mode)and(current.st_dev,current.st_ino)==(reserved.st_dev,reserved.st_ino),'Output reservation changed')
+   os.rename(staged,destination)
+  except Exception:
+   try:
+    current=destination.lstat()
+    if stat.S_ISDIR(current.st_mode)and(current.st_dev,current.st_ino)==(reserved.st_dev,reserved.st_ino):destination.rmdir()
+   except OSError:pass
+   raise
+ result={'files':len(final),'bytes':m['total_bytes'],'preserved_previous_non_directory_files':len(oldfiles)-2,'new_businesses':EXPECTED_NEW,'business_directory_records':EXPECTED_BUSINESSES,'creator_records_unchanged':3386,'manifest_sha256':RELEASE_MANIFEST_SHA256}
+ print(json.dumps(result,sort_keys=True));return result
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',default='_site');a=p.parse_args()
-    try:run_build(Path(__file__).resolve().parent,a.output)
-    except (ValueError,OSError,zipfile.BadZipFile)as e:p.exit(1,'Build rejected: '+str(e)+'\n')
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',default='_site');a=p.parse_args()
+ try:run_build(Path(__file__).resolve().parent,a.output)
+ except(ValueError,OSError,zipfile.BadZipFile)as e:p.exit(1,'Build rejected: '+str(e)+'\n')
 if __name__=='__main__':main()
-
