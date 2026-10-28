@@ -10,11 +10,11 @@
   "previous_creator_records": 3386,
   "creator_records": 3387,
   "verified_reels": 4,
-  "requested_video_target": 10,
+  "requested_video_target": 16,
   "archive": {
     "name": "ari1of1.zip",
-    "size": 1469502,
-    "sha256": "fdd7385afdce684d8743b863f530bbb4870d72464c60282adbc7eafc2627284b"
+    "size": 1469776,
+    "sha256": "6e939909f05e3b1856d33e002f3af3d5c2a3911988f505b9f215e0df2f6365d1"
   },
   "files": {
     "creators/ari1of1/assets/ari-wordmark.svg": {
@@ -22,8 +22,8 @@
       "sha256": "67924527c32a573144a0758192a9e38272b5a6925131cc7f2da17b3c8cd7cd3b"
     },
     "creators/ari1of1/assets/ari.css": {
-      "size": 25181,
-      "sha256": "5a7557c9c69f3976ef2def0f1863fd78672445aae3a8acbf7b027f8876746ffc"
+      "size": 26365,
+      "sha256": "922dd302e459c3dbcf31bc3ab075faac336acc6e6dd6bc7914c3d65b54c89c46"
     },
     "creators/ari1of1/assets/ari.js": {
       "size": 8806,
@@ -221,5 +221,6 @@
       "size": 898733,
       "sha256": "6076fb94ad243c637c83c231a6217365b51ebd31c818eeae6d19c698a488488c"
     }
-  }
+  },
+  "requested_video_target_met": false
 }

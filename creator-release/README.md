@@ -16,7 +16,7 @@ Read the original `pain2hustle/amhicle` branch `agent/aynarilla-site-preview` fi
 
 ## Video coverage — do not overstate
 
-**Four distinct Instagram Reels are verified, not the requested 10–12.** Codes: `De74IPQPyOW`, `DdmpQrpSL3C`, `DdVHRPLB9hN`, `DRvytMIESdJ`. They were visibly identified as Reels on Ari's public Instagram profile. The library uses Instagram embeds with original-post links. A known post and a loaded embed do not prove video playback; platform login or browser restrictions may still intervene.
+**Four distinct Instagram Reels are verified, not the requested minimum of 16.** Codes: `De74IPQPyOW`, `DdmpQrpSL3C`, `DdVHRPLB9hN`, `DRvytMIESdJ`. They were visibly identified as Reels on Ari's public Instagram profile. The library uses Instagram embeds with original-post links. A known post and a loaded embed do not prove video playback; platform login or browser restrictions may still intervene.
 
 Instagram's additional Reels view requires sign-in in the available session. TikTok catalog retrieval is robots-restricted. Exact-handle indexed searches did not provide more posts. No IDs, posts, download endpoints or missing video cards were fabricated, and no access block was bypassed. TikTok remains an honest profile link, not a falsely counted individual video. There is no adult gate or unverified adult-platform link.
 
@@ -29,3 +29,9 @@ Normal Cloudflare command remains `python3 build.py --output _site`; output must
 ## Verification
 
 Prepublication scoped static checks: 749 passed, eight HTML routes, no inherited creator text or unverified adult links, no missing local asset/fragment, exact tracked shop URLs on every page, JavaScript syntax passed. The complete pinned base build passed before this release. The final additive build also checks byte equality of every preserved file. Live desktop/mobile and third-party playback observations are recorded separately after publication; a static pass alone is not visual/playback verification.
+
+## First live QA and correction
+
+Cloudflare deployed release `f6525104f75f4f60c0f658bb9351e19f7fe292b0` successfully. Live desktop testing found and corrected an inherited absolute-position rule affecting the hero wordmark; ivory-theme wordmark and mobile-dock contrast were also corrected. The first live Instagram Reel (`DdmpQrpSL3C`) played in the supported embed (duration 23.52 s, paused=false, currentTime 6.81 s, readyState 4); closing removed the iframe. Other clips remain individually unverified for playback at this checkpoint. Desktop showed no broken images or horizontal overflow. Native-window resizing plus normal browser zoom exercised a 400 CSS-pixel layout, shop stacking, menu, theme persistence and saved-video dialog. This is responsive browser QA, not physical-device emulation. Chromium organizational policy disables DevTools; it was not bypassed. Final correction screenshots and remaining clip checks are pending.
+
+The user subsequently requested **at least 16 distinct real clips**, with more welcome when verifiable. Four are currently sourced; the requirement is **not met**. Authorized Instagram sign-in is being handed to the user in the same cloud browser to continue public catalog discovery. No password or private account content is stored in the repository.
