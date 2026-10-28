@@ -13,17 +13,25 @@
   "requested_video_target": 16,
   "archive": {
     "name": "ari1of1.zip",
-    "size": 5405825,
-    "sha256": "76825c208bd7a74be619b71edda65ca1efc263f8bfd36042db0b76a8a4c5e429"
+    "size": 5409547,
+    "sha256": "302c4adfc0abc3cf1c02fcb20daa8f0b7953e084ad43210365224ce795ee7014"
   },
   "files": {
+    "creators/ari1of1/assets/amazon-wordmark.svg": {
+      "size": 2819,
+      "sha256": "eb43275ff9f19ec9fe525105daa205c2f3f7828adfe50f2dcaa19c56a87a0c05"
+    },
+    "creators/ari1of1/assets/amh-box-logo.svg": {
+      "size": 1948,
+      "sha256": "6d9d61404e39556c548b8d684ab86eb08e5dd60afa1a14a4a2866054d24add82"
+    },
     "creators/ari1of1/assets/ari-wordmark.svg": {
       "size": 2834,
       "sha256": "7fa14c797636c565c86ff069c0553c35ec48499e747f939fd6785b2dff139450"
     },
     "creators/ari1of1/assets/ari.css": {
-      "size": 28143,
-      "sha256": "6e8ac7968620640f9d1eea6ff93cef6498ea9373e20acd579cdf5a82cba23bd0"
+      "size": 33097,
+      "sha256": "7e421cce77d904ace08f7366f9832eb7e7daf7a2fdbd49d391d865ed610b95b1"
     },
     "creators/ari1of1/assets/ari.js": {
       "size": 8806,
@@ -194,40 +202,40 @@
       "sha256": "dceb742885cdfd659017538a95e61db5d843d4f69eac93e801c823f6c296196f"
     },
     "creators/ari1of1/index.html": {
-      "size": 27280,
-      "sha256": "3f3b72e9ccb2701b694889069247e3540d1c18cfdf5b0eb003ccbe9488edf035"
+      "size": 27979,
+      "sha256": "9d012344949c2b2a26cd2e37cf5f7b1776534233186227498f8c50e3e24aa07b"
     },
     "creators/ari1of1/shop/index.html": {
-      "size": 11701,
-      "sha256": "ba61c78d86f0c5ce57655b32e1403b9d749a7f06d9b3a37fd544a2131f75cecd"
+      "size": 12042,
+      "sha256": "a369c73e85a87dae2b0e7bd2812db7ca9ce26e6b16dc27494e36afdeabfb895b"
     },
     "creators/ari1of1/sitemap.xml": {
       "size": 735,
       "sha256": "f6605d7f16f972d02daa9638b967277f251d620455a087e17b3a95051010c00f"
     },
     "creators/ari1of1/socials/index.html": {
-      "size": 15850,
-      "sha256": "83f81d74b83b97941542ef01e18195e7a0500ce1ca7578ad44ae5f213c294020"
+      "size": 16425,
+      "sha256": "38fe07371703dffefe5f2c468a786453928fae5e2d2410eff33ed0d81c77f87f"
     },
     "creators/ari1of1/video/DRvytMIESdJ/index.html": {
-      "size": 13614,
-      "sha256": "74f4862ecc285fbac3f0163ecb93615d964a8ff81a8012de7c5cb679ddd0d7b8"
+      "size": 13955,
+      "sha256": "22fa646303017276339bbdf0b8258599d5d3df67d5ab85bf4157a17d18a0b97f"
     },
     "creators/ari1of1/video/DdVHRPLB9hN/index.html": {
-      "size": 13596,
-      "sha256": "675f104f5b35309f42f6be10e15ec0369c99e17960f365a4c7b9dd89ac1fa5ae"
+      "size": 13937,
+      "sha256": "1644355fb51d45e74122c9d71dadc9c4b17c96e538266e8a6853eb8fb4275875"
     },
     "creators/ari1of1/video/DdmpQrpSL3C/index.html": {
-      "size": 13625,
-      "sha256": "e7424c0b2470307c9f6b6247ce86d56b31d63ab710bbfb459911707faf575b1a"
+      "size": 13966,
+      "sha256": "aa65bd3e79838716a31f8f40257131f004aff1e5dd333fe2381d7826eaa7da01"
     },
     "creators/ari1of1/video/De74IPQPyOW/index.html": {
-      "size": 13691,
-      "sha256": "01b2af7c0d6e3b238779fbaba5e99b170f7b6fd76dbdb481b4cc4c47e1c37bc9"
+      "size": 14032,
+      "sha256": "261c469e464e95efc53149e957328e84a62260bf478e336a2c1a9839d77a8b24"
     },
     "creators/ari1of1/videos/index.html": {
-      "size": 13166,
-      "sha256": "130ce6269f7d0199c3c6f512ce78f3a28fab53250f96786564e7c323a5b952b7"
+      "size": 13507,
+      "sha256": "f680962d240cf6866eb9add1a473a3939b4e52180dc71c411c6830e995638d26"
     },
     "creators/index.html": {
       "size": 2350470,
@@ -239,6 +247,6 @@
     }
   },
   "requested_video_target_met": false,
-  "site_files": 53,
-  "exported_files": 6342
+  "site_files": 55,
+  "exported_files": 6344
 }
