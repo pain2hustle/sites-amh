@@ -1,0 +1,25 @@
+{
+  "site": "DKAINSWORLD",
+  "requested_host": "dkainsworld.pages.dev",
+  "provenance": "Original artwork supplied by the site owner for use on the site. Original JPEG bytes and visible provenance labels preserved. No new license asserted; underlying rights remain with their respective holders.",
+  "assets": [
+    {
+      "path": "assets/dkainsworld-full-original.jpg",
+      "source_filename": "1000020586.jpg",
+      "purpose": "Full on-page and footer artwork",
+      "sha256": "c40ead21a8d64d88b4d64431ac448eb7387c329413dbd1a36de496e06c2283df",
+      "bytes": 473770,
+      "width": 2048,
+      "height": 1117
+    },
+    {
+      "path": "assets/dkainsworld-header-original.jpg",
+      "source_filename": "1000020938.jpg",
+      "purpose": "Owner-supplied header artwork; visible AI-generated content label retained",
+      "sha256": "ad45b19bea65868f8b2a3dbcb7360150e800fa7c6f38d88a5a9fb7a4502640a1",
+      "bytes": 317062,
+      "width": 2048,
+      "height": 1117
+    }
+  ]
+}
