@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "The Crooked Man", "slug": "the-crooked-man", "primaryUrl": "https://www.instagram.com/thecrookedman10/", "accent": "#c1dd73", "dark": "#101516"};

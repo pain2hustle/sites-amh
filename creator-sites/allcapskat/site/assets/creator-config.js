@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "Kat \u00b7 Costco Ho", "slug": "kat-costco-ho", "primaryUrl": "https://www.instagram.com/allcapskat/", "accent": "#f6a39c", "dark": "#131c31"};

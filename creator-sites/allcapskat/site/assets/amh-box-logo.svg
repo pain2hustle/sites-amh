@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Artificial Mind Hive UFO logo</title>
+  <desc id="desc">The gold AMH mark framed beneath two small flying saucers.</desc>
+  <defs>
+    <linearGradient id="gold" x1="80" y1="54" x2="430" y2="454" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff0aa"/>
+      <stop offset="0.48" stop-color="#f5c542"/>
+      <stop offset="1" stop-color="#c97914"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="70" y="82" width="372" height="354" rx="82" fill="#09070f" fill-opacity=".82" stroke="url(#gold)" stroke-width="13"/>
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <g transform="translate(142 38)">
+      <path d="M18 49c7-22 43-22 50 0" stroke-width="10"/>
+      <path d="M2 51c10 24 72 24 82 0-18-11-64-11-82 0Z" fill="#f5c542" fill-opacity=".12" stroke-width="10"/>
+      <path d="M18 76 7 102M67 76l11 26" stroke-width="7" opacity=".72"/>
+    </g>
+    <g transform="translate(286 21) scale(1.12)">
+      <path d="M18 49c7-22 43-22 50 0" stroke-width="10"/>
+      <path d="M2 51c10 24 72 24 82 0-18-11-64-11-82 0Z" fill="#f5c542" fill-opacity=".12" stroke-width="10"/>
+      <path d="M18 76 7 102M67 76l11 26" stroke-width="7" opacity=".72"/>
+    </g>
+  </g>
+  <text x="256" y="307" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="-8" fill="url(#gold)">AMH</text>
+  <path d="M134 345h244" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="127" cy="345" r="6" fill="#fff0aa"/>
+  <circle cx="385" cy="345" r="6" fill="#fff0aa"/>
+</svg>

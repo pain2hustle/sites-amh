@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "Adina Y Flores", "slug": "adina-y-flores", "primaryUrl": "https://substack.com/@adinaflores", "accent": "#e0a178", "dark": "#1c1714"};

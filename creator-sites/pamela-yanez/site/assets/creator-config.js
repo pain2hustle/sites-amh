@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "Pamela Yanez", "slug": "pamela-yanez", "primaryUrl": "https://www.instagram.com/pamela.yanez/", "accent": "#e9adca", "dark": "#24141c"};

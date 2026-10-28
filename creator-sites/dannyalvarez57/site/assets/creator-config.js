@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "Danny Alvarez", "slug": "danny-alvarez", "primaryUrl": "https://www.instagram.com/dannyalvarez57/", "accent": "#abc2d5", "dark": "#12171b"};

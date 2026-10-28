@@ -1,0 +1,58 @@
+[
+  {
+    "id": "DOL7ONKgT5I",
+    "type": "instagram",
+    "owner": "immapeaches",
+    "order": 1,
+    "url": "https://www.instagram.com/immapeaches/reel/DOL7ONKgT5I/",
+    "category": "Instagram",
+    "date": "September 04, 2025",
+    "title": "Strength, in focus",
+    "description": "An original Instagram reel from @immapeaches. Open the platform player or watch the original post.",
+    "image": "/assets/creator/reel-DOL7ONKgT5I.jpg"
+  },
+  {
+    "id": "De553Y_h-Mt",
+    "type": "instagram",
+    "owner": "immapeaches",
+    "order": 2,
+    "url": "https://www.instagram.com/immapeaches/reel/De553Y_h-Mt/",
+    "category": "Instagram",
+    "date": "October 24, 2026",
+    "title": "Showing up",
+    "description": "An original Instagram reel from @immapeaches. Open the platform player or watch the original post.",
+    "image": "/assets/creator/reel-De553Y_h-Mt.jpg"
+  },
+  {
+    "id": "story-01",
+    "type": "photo-story",
+    "order": 1,
+    "title": "The strength edit",
+    "description": "A silent animated photo story made from the supplied profile stills. This is not an original social video.",
+    "date": "PHOTO STORY · 15 SECONDS",
+    "category": "Photo stories",
+    "url": "https://www.instagram.com/immapeaches/",
+    "image": "/assets/creator/portrait-3.jpg",
+    "frames": [
+      "/assets/creator/portrait-1.jpg",
+      "/assets/creator/portrait-2.jpg",
+      "/assets/creator/portrait-3.jpg"
+    ]
+  },
+  {
+    "id": "story-02",
+    "type": "photo-story",
+    "order": 2,
+    "title": "A different perspective",
+    "description": "A silent animated photo story made from the supplied profile stills. This is not an original social video.",
+    "date": "PHOTO STORY · 15 SECONDS",
+    "category": "Photo stories",
+    "url": "https://www.instagram.com/immapeaches/",
+    "image": "/assets/creator/portrait-2.jpg",
+    "frames": [
+      "/assets/creator/portrait-3.jpg",
+      "/assets/creator/portrait-1.jpg",
+      "/assets/creator/portrait-2.jpg"
+    ]
+  }
+]

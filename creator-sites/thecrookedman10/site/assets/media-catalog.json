@@ -1,0 +1,58 @@
+[
+  {
+    "id": "DGw73VKORNy",
+    "type": "instagram",
+    "owner": "thecrookedman10",
+    "order": 1,
+    "url": "https://www.instagram.com/thecrookedman10/reel/DGw73VKORNy/",
+    "category": "Instagram",
+    "date": "March 03, 2025",
+    "title": "The lifting edit",
+    "description": "An original Instagram reel from @thecrookedman10. Open the platform player or watch the original post.",
+    "image": "/assets/creator/reel-DGw73VKORNy.jpg"
+  },
+  {
+    "id": "DfAVZm5hS2y",
+    "type": "instagram",
+    "owner": "thecrookedman10",
+    "order": 2,
+    "url": "https://www.instagram.com/thecrookedman10/reel/DfAVZm5hS2y/",
+    "category": "Instagram",
+    "date": "October 27, 2026",
+    "title": "Back in the gym",
+    "description": "An original Instagram reel from @thecrookedman10. Open the platform player or watch the original post.",
+    "image": "/assets/creator/reel-DfAVZm5hS2y.jpg"
+  },
+  {
+    "id": "story-01",
+    "type": "photo-story",
+    "order": 1,
+    "title": "An offbeat introduction",
+    "description": "A silent animated photo story made from the supplied profile stills. This is not an original social video.",
+    "date": "PHOTO STORY · 15 SECONDS",
+    "category": "Photo stories",
+    "url": "https://www.instagram.com/thecrookedman10/",
+    "image": "/assets/creator/portrait-1.jpg",
+    "frames": [
+      "/assets/creator/portrait-1.jpg",
+      "/assets/creator/portrait-2.jpg",
+      "/assets/creator/portrait-3.jpg"
+    ]
+  },
+  {
+    "id": "story-02",
+    "type": "photo-story",
+    "order": 2,
+    "title": "The everyday cut",
+    "description": "A silent animated photo story made from the supplied profile stills. This is not an original social video.",
+    "date": "PHOTO STORY · 15 SECONDS",
+    "category": "Photo stories",
+    "url": "https://www.instagram.com/thecrookedman10/",
+    "image": "/assets/creator/portrait-2.jpg",
+    "frames": [
+      "/assets/creator/portrait-3.jpg",
+      "/assets/creator/portrait-1.jpg",
+      "/assets/creator/portrait-2.jpg"
+    ]
+  }
+]

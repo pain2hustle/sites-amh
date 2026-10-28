@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-28",
+  "staticSourceChecks": "passed for all 11 independent source sites",
+  "legacyCreators": {
+    "ashleytienda": {
+      "mockedAssertions": 44,
+      "perClickAgeGateCases": 13,
+      "pass": true
+    },
+    "isatobaa": {
+      "mockedAssertions": 61,
+      "perClickAgeGateCases": 13,
+      "pass": true
+    },
+    "graciebon": {
+      "mockedAssertions": 57,
+      "perClickAgeGateCases": 11,
+      "pass": true
+    },
+    "sherryforeign": {
+      "mockedAssertions": 78,
+      "pass": true
+    }
+  },
+  "totalMockedAssertions": 767,
+  "totalAgeGateCases": 37,
+  "scope": "Static source, route/assets, mocked interactions and isolated age-link navigation tests. No test sent messages, logged in, affirmed age, or purchased anything.",
+  "actualBrowserVisualQA": "not performed",
+  "actualEmbeddedPlayback": "not verified",
+  "indexing": "noindex retained",
+  "publication": "independent partial source preparation only; not deployed",
+  "publicationCandidateChecks": {
+    "htmlRoutes": 79,
+    "runtimeFiles": 428,
+    "uniqueJavaScriptSyntaxChecks": 34,
+    "stagerSafetyCases": 9,
+    "scope": "Manifest hashes, add-only paths, local route/assets/fragments, safe links, catalog parity, noindex, secret-pattern exclusion, image integrity and GPS removal; fresh passing source test results retained.",
+    "privacy": "Runtime-only catalogs and lossless image metadata removal",
+    "legacy404": "Added missing noindex tags on Ashley and Sherry 404 pages"
+  },
+  "sevenCreatorSubset": {
+    "htmlRoutes": 61,
+    "originalInstagramReels": 12,
+    "mockedAssertions": 427,
+    "pass": true
+  }
+}

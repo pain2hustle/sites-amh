@@ -1,0 +1,54 @@
+[
+  {
+    "id": "DdPr0gCBsHW",
+    "type": "instagram",
+    "title": "The opening look",
+    "label": "01 / Opening reel",
+    "description": "The first selected reel. A backstage look from Sherry’s public Instagram.",
+    "url": "https://www.instagram.com/reel/DdPr0gCBsHW/?mdxt=MWQxN3QxNjdvZWo1eA==",
+    "image": "/assets/creator/DdPr0gCBsHW.jpg",
+    "date": "September 13, 2026",
+    "nativeSrc": null,
+    "duration": null,
+    "coverType": "Original Instagram reel cover"
+  },
+  {
+    "id": "Deu1IoahIfi",
+    "type": "instagram",
+    "title": "A moment on the runway",
+    "label": "02 / Landing reel",
+    "description": "The second selected reel. A runway moment from Sherry’s public Instagram.",
+    "url": "https://www.instagram.com/reel/Deu1IoahIfi/?obrf=cXBkZGFpb2IzMHRk",
+    "image": "/assets/creator/Deu1IoahIfi.jpg",
+    "date": "October 20, 2026",
+    "nativeSrc": null,
+    "duration": null,
+    "coverType": "Original Instagram reel cover"
+  },
+  {
+    "id": "m5gpmCy2tEU",
+    "type": "youtube",
+    "title": "SPEND THE DAY WITH ME | DON OMAR CONCERT VLOG",
+    "label": "03 / YouTube film",
+    "description": "Watch the full original film on Sherry Foreign’s own public YouTube channel.",
+    "url": "https://m.youtube.com/watch?v=m5gpmCy2tEU&pp=iggUQAFKEDV2bV9zUkdMdHdZRGhFN2E%3D&fbclid=PAT01DUAVOeOdleHRuA2FlbQIxMABwZG9mAnNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABpzlnNXN4hg_z87no-oIxMgtQB33zyFs6XvKd6iva4DASSGkJmZVXIVfaNzX8_aem_TF_PvMOKfui3QBWn0HJW9g",
+    "image": "/assets/creator/m5gpmCy2tEU.svg",
+    "date": "11:22",
+    "duration": "11:22",
+    "nativeSrc": null,
+    "coverType": "Editorial title artwork — not a video frame"
+  },
+  {
+    "id": "mFHaI82y-Ms",
+    "type": "youtube",
+    "title": "Sherry Foreign FLLFW 2023",
+    "label": "04 / YouTube film",
+    "description": "Watch the full original film on Sherry Foreign’s own public YouTube channel.",
+    "url": "https://www.youtube.com/watch?v=mFHaI82y-Ms",
+    "image": "/assets/creator/mFHaI82y-Ms.svg",
+    "date": "2:20",
+    "duration": "2:20",
+    "nativeSrc": null,
+    "coverType": "Editorial title artwork — not a video frame"
+  }
+]

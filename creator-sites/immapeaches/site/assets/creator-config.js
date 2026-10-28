@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "NICHA", "slug": "nicha", "primaryUrl": "https://www.instagram.com/immapeaches/", "accent": "#b0d9aa", "dark": "#101d1a"};

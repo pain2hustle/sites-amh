@@ -1,0 +1,1 @@
+window.CREATOR_CONFIG={"name": "Anna Cowgirlbgo", "slug": "anna-cowgirlbgo", "primaryUrl": "https://www.instagram.com/annacowgirlbgo/", "accent": "#f3b973", "dark": "#24150f"};

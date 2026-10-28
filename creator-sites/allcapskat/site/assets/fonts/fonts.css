@@ -1,0 +1,4 @@
+@font-face{font-family:'Inter';src:url('/assets/fonts/a699af1dea30b799.woff') format('woff');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Anton';src:url('/assets/fonts/9a0b87665ccc2051.woff') format('woff');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('/assets/fonts/7d62dda1d3895620.woff') format('woff');font-weight:100 900;font-style:italic;font-display:swap}
+:root{--display:'Anton',sans-serif;--body:'Inter',sans-serif;--script:'Playfair Display',Georgia,serif}
