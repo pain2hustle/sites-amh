@@ -1,0 +1,225 @@
+{
+  "format": 1,
+  "origin": "https://sites-amh.pages.dev",
+  "namespace": "creators/ari1of1/",
+  "base_commit": "73432bb2374697b75e6bd3b9495430607d0807a1",
+  "base_builder_sha256": "f68462be31b9da370c040e00784eeafffe6e5857f0309692324b4dc1ca384a88",
+  "base_directory_sha256": "c1374cb5908fd161f6d9290acfe3197c26cbc2a57e21c16177aafac3509ad596",
+  "base_creator_json_sha256": "c6f29b0a2d7a0bd93a0d2f7b4085d003ef134f61fb013ba7a74ffca606cb7342",
+  "business_records": 3489,
+  "previous_creator_records": 3386,
+  "creator_records": 3387,
+  "verified_reels": 4,
+  "requested_video_target": 10,
+  "archive": {
+    "name": "ari1of1.zip",
+    "size": 1469502,
+    "sha256": "fdd7385afdce684d8743b863f530bbb4870d72464c60282adbc7eafc2627284b"
+  },
+  "files": {
+    "creators/ari1of1/assets/ari-wordmark.svg": {
+      "size": 3409,
+      "sha256": "67924527c32a573144a0758192a9e38272b5a6925131cc7f2da17b3c8cd7cd3b"
+    },
+    "creators/ari1of1/assets/ari.css": {
+      "size": 25181,
+      "sha256": "5a7557c9c69f3976ef2def0f1863fd78672445aae3a8acbf7b027f8876746ffc"
+    },
+    "creators/ari1of1/assets/ari.js": {
+      "size": 8806,
+      "sha256": "fb91db47a9e788d14e22d50a8c4a0c7bd1e324cdb6f17812a48c151894ec8d03"
+    },
+    "creators/ari1of1/assets/brand.css": {
+      "size": 34208,
+      "sha256": "25b359c82fc30e0acee94dfbd495b887f8bd47450368aa17f76f14ed0c1635f7"
+    },
+    "creators/ari1of1/assets/cinema.css": {
+      "size": 5550,
+      "sha256": "d419eff8a53be5d93bb1dddab47269f87225d11b07ee34ba94ecb465d480686d"
+    },
+    "creators/ari1of1/assets/creator/photo-1.jpg": {
+      "size": 28351,
+      "sha256": "3c04dcf3c226330ee43b810fed5109d1dc26647542c7a0af2851adf1f36f8f07"
+    },
+    "creators/ari1of1/assets/creator/photo-10.jpg": {
+      "size": 38695,
+      "sha256": "c5e393bf2bf2e726c7df00139435e6fcebe6834e811b7da0090e274bd819ab1c"
+    },
+    "creators/ari1of1/assets/creator/photo-11.jpg": {
+      "size": 40720,
+      "sha256": "e2e7dcb983e1b6a3dcd0b51ca73b367cd11cbf0b242f82488555e1e2ea4bbdc0"
+    },
+    "creators/ari1of1/assets/creator/photo-2.jpg": {
+      "size": 40201,
+      "sha256": "0e379917882b00bb4ad768eeb0050e23c6fe75e171b7dc06e2858851c0f247b1"
+    },
+    "creators/ari1of1/assets/creator/photo-3.jpg": {
+      "size": 28679,
+      "sha256": "e65062fe4a2e25e17719d7a28891f61d136f1a57393fcea8a463f17df0ac93f5"
+    },
+    "creators/ari1of1/assets/creator/photo-5.jpg": {
+      "size": 49706,
+      "sha256": "0a5c4a4a868b7d2a82f0f0b0e127a949879336d9d660598a860de96a9b95503e"
+    },
+    "creators/ari1of1/assets/creator/photo-6.jpg": {
+      "size": 26979,
+      "sha256": "ce3ccd9da810251f8182fd4cb178fc52c2956210c35e9350f136ff8165f1cb86"
+    },
+    "creators/ari1of1/assets/creator/photo-7.jpg": {
+      "size": 25433,
+      "sha256": "682b0c43f40547e613a107a95040e8f18d32647c2e348085727f9ed0086ccb95"
+    },
+    "creators/ari1of1/assets/creator/photo-9.jpg": {
+      "size": 37455,
+      "sha256": "afe310dfdd4aac3fc9d984d23dbc7bc5bc046ee7c8f4d3422d67bdc66345ed64"
+    },
+    "creators/ari1of1/assets/creator/profile.jpg": {
+      "size": 4583,
+      "sha256": "e316892303019a4a1b0652dc99691dc0019e50b3ddeeab83985af0a5aa74d295"
+    },
+    "creators/ari1of1/assets/extensions.css": {
+      "size": 10354,
+      "sha256": "251c46e88a5cdb77afb2743b44065b582ca0e33d94bc08b3dded6c93a08fd858"
+    },
+    "creators/ari1of1/assets/favicon.svg": {
+      "size": 363,
+      "sha256": "f8592ce4c0ae5b9a92e5d8ed8be7a01f1bad7f1a57f45fb39f4affe6c00ce32f"
+    },
+    "creators/ari1of1/assets/fonts/501f76ca195ed91f.ttf": {
+      "size": 86636,
+      "sha256": "0d85af813fc3ed87db0c6265515689b2eef5cbaf7aab17922528dfc95a2cd73f"
+    },
+    "creators/ari1of1/assets/fonts/6f49e1b28bce7339.ttf": {
+      "size": 326468,
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+    },
+    "creators/ari1of1/assets/fonts/7d62dda1d3895620.ttf": {
+      "size": 111208,
+      "sha256": "5b667e91b59a4e1d7985eb9933be7f03ad46e1ea6380b8e729ff6f136ef2ab42"
+    },
+    "creators/ari1of1/assets/fonts/87e867b52640b3b3.ttf": {
+      "size": 326048,
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    },
+    "creators/ari1of1/assets/fonts/9a0b87665ccc2051.ttf": {
+      "size": 130324,
+      "sha256": "fd9301f2837c99df2be07cc7f0be66e9470f5354d8fcf1606027c67fcd637a53"
+    },
+    "creators/ari1of1/assets/fonts/SOURCES.json": {
+      "size": 2574,
+      "sha256": "ca66ba9618cabf19372e8d4e2ba3b998800f8f76f63dea7599b638ab95099a41"
+    },
+    "creators/ari1of1/assets/fonts/a699af1dea30b799.ttf": {
+      "size": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    "creators/ari1of1/assets/fonts/anton-OFL.txt": {
+      "size": 4484,
+      "sha256": "ee67e6ee22790b7929f1a3769ca2801d565c64b5a9096942c1adf5596de9c9e4"
+    },
+    "creators/ari1of1/assets/fonts/barlowcondensed-OFL.txt": {
+      "size": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    "creators/ari1of1/assets/fonts/d02cbe275f68b2e0.ttf": {
+      "size": 87120,
+      "sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7"
+    },
+    "creators/ari1of1/assets/fonts/e45972c7e9f24dc3.ttf": {
+      "size": 325304,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    "creators/ari1of1/assets/fonts/f2f4ef0a9cfdcbbf.ttf": {
+      "size": 81448,
+      "sha256": "cc9fb2539cf27df48255982e896d28f544483537cdb41f9fabd741af8992d719"
+    },
+    "creators/ari1of1/assets/fonts/fonts.css": {
+      "size": 1726,
+      "sha256": "899957c5129307216d6329283a346584dc295b773b4b93c46362dd74dddc6638"
+    },
+    "creators/ari1of1/assets/fonts/inter-OFL.txt": {
+      "size": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    "creators/ari1of1/assets/fonts/playfairdisplay-OFL.txt": {
+      "size": 4449,
+      "sha256": "566be814f8e96e93dfa16101331557eb6b5467e9e03f627c0910fe93ca12300e"
+    },
+    "creators/ari1of1/assets/media-catalog.js": {
+      "size": 1122,
+      "sha256": "a5c80b03555f8486958569b42d95ff740bb4624e4a0c7390e6abcff18f08dbcd"
+    },
+    "creators/ari1of1/assets/media-catalog.json": {
+      "size": 1242,
+      "sha256": "a00dc461b99dccef5d3c327eb1225e3afd91932e83f6fe34e8f350e395ef7650"
+    },
+    "creators/ari1of1/assets/social-instagram.svg": {
+      "size": 2101,
+      "sha256": "f53af2d1fc5292ba1433b5c1faf50005ce6a997fa302d1816989929f379a59dc"
+    },
+    "creators/ari1of1/assets/social-tiktok.svg": {
+      "size": 707,
+      "sha256": "6f54ac8d325faacea8935bdc44cbed60206a6b408641799e5fea1cba7c1a0af7"
+    },
+    "creators/ari1of1/assets/template.css": {
+      "size": 28699,
+      "sha256": "b28d377863810e9b1a32281baf06e78718aeec0a1f7bed1726efaadd73c2fe64"
+    },
+    "creators/ari1of1/assets/themes.css": {
+      "size": 10616,
+      "sha256": "419648bbf9f8a9c6c390757364a56a4f50d27391addbe503fd022f0b3b53e62a"
+    },
+    "creators/ari1of1/assets/veyes-icon.jpg": {
+      "size": 7484,
+      "sha256": "1eb604716b3785af5f30626fd989898912876d5d40849b597e91720a3c855b53"
+    },
+    "creators/ari1of1/assets/veyes-logo.jpg": {
+      "size": 6887,
+      "sha256": "dceb742885cdfd659017538a95e61db5d843d4f69eac93e801c823f6c296196f"
+    },
+    "creators/ari1of1/index.html": {
+      "size": 26742,
+      "sha256": "076aabe22780a22f8fa3fa2915a95654953dc1f1b510ff20e1a38ef58137c316"
+    },
+    "creators/ari1of1/shop/index.html": {
+      "size": 11695,
+      "sha256": "4bec0947ac426094b9eeb37a5287406ddb33c65e18f580accecf8cf3d4917455"
+    },
+    "creators/ari1of1/sitemap.xml": {
+      "size": 735,
+      "sha256": "f6605d7f16f972d02daa9638b967277f251d620455a087e17b3a95051010c00f"
+    },
+    "creators/ari1of1/socials/index.html": {
+      "size": 15823,
+      "sha256": "f9d899c63f83abf966c263f20985c3b05854a28e4d6260fdfded00276f62ea90"
+    },
+    "creators/ari1of1/video/DRvytMIESdJ/index.html": {
+      "size": 13608,
+      "sha256": "b33c40c44a7eff00dc5756c9772d069f9bf66824e0f1b1dcba9c8104ed95a5a4"
+    },
+    "creators/ari1of1/video/DdVHRPLB9hN/index.html": {
+      "size": 13590,
+      "sha256": "31ac6637391723b2fe021624535bf657fef37aacd2d919b67a9b6f7b81acdb40"
+    },
+    "creators/ari1of1/video/DdmpQrpSL3C/index.html": {
+      "size": 13619,
+      "sha256": "510ed60b6b2762399257d7bb54cdcec398ce5b00a0e74eb1697b49d7a5a77f96"
+    },
+    "creators/ari1of1/video/De74IPQPyOW/index.html": {
+      "size": 13685,
+      "sha256": "db5c3416e5d84328489018c2c5a23f2be3f37857995557ba87de8808078aa7f2"
+    },
+    "creators/ari1of1/videos/index.html": {
+      "size": 13160,
+      "sha256": "42536eec40d1d26df03dd1f0704653b6bef28aff15077dd6d4903c91bf0850b8"
+    },
+    "creators/index.html": {
+      "size": 2350470,
+      "sha256": "52c2a0a7c173719270fdadb6a4f75a47e0e3974ff54a07186d2b5de7949422f2"
+    },
+    "creators/sites.json": {
+      "size": 898733,
+      "sha256": "6076fb94ad243c637c83c231a6217365b51ebd31c818eeae6d19c698a488488c"
+    }
+  }
+}

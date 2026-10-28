@@ -12,3 +12,7 @@ Root directory: the folder containing this `build.py` and `packs/`.
 Cloudflare Pages hosts the validated build output. No Workers `wrangler deploy` command or Workers assets config is included. Select only the reviewed repository/branch after separate authorization. Do not drag/drop the3037 assets through the1000-file dashboard method.
 
 The extractor verifies every pack/member/path/count/size/hash, noindex, media, own-host metadata and exact242 route set before an isolated atomic output. Never replace it with unzip or omit its safeguards. Existing workers/sites/directories and the original live shared hair guides remain untouched.
+
+## Current additive creator release
+
+Ari's full creator website is exported separately at `/creators/ari1of1/` and added to the searchable `/creators/` directory. All business sites and prior creator records are preserved. See [`creator-release/README.md`](creator-release/README.md) for the design, source workflow, exact shop-link handling, tests and honest four-Reel coverage limit (the requested 10–12 target is not yet met). The existing build command and output directory are unchanged.
