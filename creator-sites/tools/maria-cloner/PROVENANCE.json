@@ -1,0 +1,7 @@
+{
+  "upstream_cloner": "D:\\wt\\cloner-claude\\creators\\process\\codex\\clone_creator.py",
+  "upstream_cloner_sha256": "f8aa5458503a83e5eeb52592db8be0ba4c6aab158af92a89a841455945e86a25",
+  "maria_git_reference": "2b37b75714c004c061728ca6350ab507cef0125f",
+  "reference": "Current public Maria HTML and linked CSS, cached 2026-10-28; no APIs, bindings, accounts, customer data, or donor backend copied",
+  "reference_sha256": "53cabe0cb8ec4555c5bfdf3170b31246927d602e4380eb29abd4d575fa856d7f"
+}

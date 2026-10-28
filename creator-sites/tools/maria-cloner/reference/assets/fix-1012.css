@@ -1,0 +1,321 @@
+/* 2026-10-12 pass: no blur, arrows in gutters, contained lists, first look, phone fixes. */
+*,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.bar.solid,.bar{background:#0d0816!important}
+@media(max-width:799px){.phone-dock{background:#180d23!important}}
+.dock{background:#1a0f22!important}.co-veil,.ed-veil{background:rgba(8,4,14,.9)!important}
+.cinema-controls a,.cinema-controls button{background:#1c0f26!important}
+.burger{background:#140b1c!important}
+
+/* ---------- Opening logo: original file, close to its real size, no stretch ---------- */
+.brand-boot video,.brand-boot .boot-fallback{filter:none!important;width:min(1280px,86vw,calc((100svh - 170px)*16/9))!important;max-width:1280px!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain}
+@media(max-width:799px){.brand-boot video,.brand-boot .boot-fallback{width:100vw!important}}
+
+/* ---------- Arrows: thick chevron, no circle, never over text ---------- */
+.mx-arrow{position:absolute;z-index:6;display:grid;place-items:center;width:40px;height:72px;padding:0;border:0;background:transparent;color:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.mx-arrow svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px #ff4fb8) drop-shadow(0 0 14px #9b4dff)}
+.mx-arrow.mx-next svg{transform:scaleX(-1)}
+.mx-arrow:hover svg,.mx-arrow:focus-visible svg{color:#ffd0f1;transform:scale(1.12)}.mx-arrow.mx-next:hover svg,.mx-arrow.mx-next:focus-visible svg{transform:scaleX(-1) scale(1.12)}
+.mx-carousel{position:relative;padding:0 44px}
+.mx-carousel>.mx-prev{left:0;top:50%;transform:translateY(-50%)}
+.mx-carousel>.mx-next{right:0;top:50%;transform:translateY(-50%)}
+/* restyle the older rails the same way */
+.creator-rail-arrow,.landing-merch-arrow,.movie-side-arrow,.item-side-arrow{border:0!important;background:transparent!important;box-shadow:none!important;border-radius:0!important;color:#fff!important;font:900 64px/.8 system-ui!important;text-shadow:0 0 8px #ff4fb8,0 0 18px #9b4dff!important}
+.reels-carousel,.landing-merch-carousel{position:relative;padding:0 44px}
+.reels-carousel>.creator-rail-prev,.landing-merch-carousel>.landing-merch-prev{left:0!important}
+.reels-carousel>.creator-rail-next,.landing-merch-carousel>.landing-merch-next{right:0!important}
+
+/* ---------- First look: native YouTube player, red heart, Maria fully in frame ---------- */
+.film.has-first-look .first-look-shot .media{opacity:0}
+.film.has-first-look #introToggle{display:none!important}.cinema-controls .enter-site{color:#fff!important;border-color:#e05cc4!important}
+.intro-first-look{position:absolute;z-index:4;right:5vw;top:118px;width:min(54vw,980px);pointer-events:auto}
+.intro-first-screen{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:2px solid #e05cc4;box-shadow:0 0 0 1px #ffffff22,0 18px 70px #000c,0 0 40px #d23aa855;background:linear-gradient(135deg,#4a1450,#1c0b2a)}
+.intro-first-screen iframe,.intro-first-screen .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+.intro-first-poster{position:absolute;inset:0;padding:0;border:0;background:none;cursor:pointer}
+.intro-first-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.intro-yt-btn{position:absolute;left:50%;top:50%;width:84px;transform:translate(-50%,-50%);filter:drop-shadow(0 6px 20px #000a);transition:transform .2s}
+.intro-first-poster:hover .intro-yt-btn{transform:translate(-50%,-50%) scale(1.08)}
+.intro-first-look small{display:block;margin-top:10px;color:#ffc4ea;font:700 11px var(--cond,sans-serif);letter-spacing:.24em}
+.film.has-first-look .cinema-controls #heroWatch{display:none}
+.heart-motion{width:clamp(190px,24vw,320px)!important}
+@media(max-width:799px){
+ .intro-first-look{left:12px;right:12px;top:74px;width:auto}
+ .intro-yt-btn{width:68px}
+ .film.has-first-look .first-look-shot .cap{bottom:21%}
+ .film.has-first-look .shot-tag{display:none}
+ .heart-motion-red{width:min(60vw,250px)!important;left:auto!important;right:0!important;top:36%!important}
+ .heart-motion{width:min(56vw,230px)!important}
+}
+
+/* ---------- Movie club: big player, contained picks, phone no overflow ---------- */
+.club-layout>*{min-width:0}
+.movie-feature .movie-stage{position:absolute;inset:0;z-index:3;background:#0b0610;display:none}.movie-feature.is-playing .movie-stage{display:block}
+.movie-feature .movie-stage iframe,.movie-feature .movie-stage .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+.movie-feature.is-playing .movie-copy{display:none}
+.movie-feature .movie-close{position:absolute;z-index:5;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:10px;background:#2a1233;color:#fff;font-size:22px;cursor:pointer}
+@media(min-width:901px){.movie-picks{max-height:590px!important}.movie-picks-wrap{padding:0}.movie-side-arrow{display:none!important}}
+@media(max-width:900px){
+ .movie-feature.is-playing{aspect-ratio:16/9;min-height:0!important}
+ .movie-feature.mp-on>img{visibility:hidden}
+ .movie-picks-wrap{position:relative;padding:0 40px!important}
+ .movie-side-arrow{display:block!important;position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:38px;height:70px;padding:0}
+ .movie-side-prev{left:0!important}.movie-side-next{right:0!important}
+}
+
+/* ---------- Side videos by the profile: contained on PC, one swipe rail on phone ---------- */
+@media(min-width:1001px){
+ .profile-videos.mx-carousel{padding:44px 0!important;transform:none!important;align-self:center}
+ .mx-vertical .mx-track{display:grid!important;grid-auto-rows:max-content;gap:22px;overflow:hidden!important;padding:4px 6px!important}
+ .mx-vertical .mx-track::-webkit-scrollbar{display:none}
+ .mx-vertical .mx-track>.profile-video{scroll-snap-align:start;flex:none!important}
+ .mx-vertical>.mx-prev{left:50%!important;top:0!important;transform:translateX(-50%) rotate(90deg)!important;height:44px}
+ .mx-vertical>.mx-next{left:50%!important;right:auto!important;top:auto!important;bottom:0;transform:translateX(-50%) rotate(90deg)!important;height:44px}
+}
+@media(max-width:1000px){
+ .profile-videos.mx-empty{display:none!important}
+ .mx-vertical .mx-track{display:flex!important;gap:14px;overflow-x:auto!important;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 12px!important}
+ .mx-vertical .mx-track::-webkit-scrollbar{display:none}
+ .mx-vertical .mx-track>.profile-video{flex:0 0 min(78vw,330px)!important;scroll-snap-align:center}
+ .profile-video-carousel.mx-carousel{padding:0 36px!important}
+ .profile-video-carousel>.mx-arrow{top:calc(50% - 18px)}
+}
+.profile-screen{position:relative;background:linear-gradient(135deg,#5a1660,#24103a)}
+.profile-screen iframe,.profile-screen .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- Shorts: one plays, no extra mute button, pink/purple not grey ---------- */
+.short-sound{display:none!important}
+.shorts-viewer.mx-carousel{padding:0 48px}
+.short-screen{background:linear-gradient(160deg,#6b1a6e,#2a1040 70%)!important}
+.short-screen iframe,.short-screen .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:700px){.shorts-viewer.mx-carousel{padding:0 36px}}
+
+/* ---------- Featured: big video + phone frame with Shorts ---------- */
+.fyt{background:linear-gradient(135deg,#5a1660,#1f0c30)}
+.fyt iframe,.fyt .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+.freel.mx-phone{display:flex!important;flex-direction:column;padding:14px 8px 8px!important;background:linear-gradient(160deg,#3a1146,#170a24)!important;border:5px solid #c45bc4!important;border-radius:38px!important;box-shadow:0 0 0 1px #ffffff1f,0 20px 70px #000b,0 0 34px #d43aa855!important;max-width:360px;width:100%;justify-self:center}
+.mx-phone-screen{position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;background:linear-gradient(160deg,#6b1a6e,#2a1040 70%)}
+.mx-phone-screen iframe,.mx-phone-screen .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mx-phone-screen .short-play{position:absolute;inset:0;padding:0;border:0;background:none;cursor:pointer}
+.mx-phone-screen .short-play img{width:100%;height:100%;object-fit:cover}
+.mx-phone-screen .short-play span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#ff3fa4;color:#fff;font-size:24px;box-shadow:0 0 24px #ff3fa4aa}
+.mx-phone-bar{position:relative;display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 44px}
+.mx-phone-bar a{color:#ffd0f1;font:700 12px var(--sans,sans-serif);letter-spacing:.04em;text-align:center}
+.mx-phone-bar .mx-arrow{height:54px;top:0}.mx-phone-bar .mx-prev{left:0}.mx-phone-bar .mx-next{right:0}
+@media(max-width:600px){.freel.mx-phone{max-width:330px}}
+
+/* ---------- Newest drops player + IG reels: pink/purple boxes ---------- */
+.ytbox{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#5a1660,#1f0c30)!important;border-radius:18px;overflow:hidden}
+.ytbox iframe,.ytbox .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+.phone-beach-poster{position:relative}.phone-beach-poster iframe,.phone-beach-poster .mp-player{position:absolute;inset:0;width:100%;height:100%;border:0}
+.reel{background:linear-gradient(160deg,#3a1146,#170a24)!important}
+.reel-open{background:linear-gradient(90deg,#d62f9a,#7d34d6)!important;color:#fff!important}
+
+/* ---------- Hair set feature: product fills the frame, no grey box ---------- */
+.merch-feature-image{background:radial-gradient(ellipse at 50% 45%,#5b1d62 0,#2a1238 55%,#140a1f 100%)!important;padding:0!important;overflow:hidden}
+.merch-feature-image img{width:100%!important;height:100%!important;max-height:none!important;object-fit:contain!important;background:transparent!important}
+.merch-feature-image img[src*="extension-"]{object-fit:cover!important}
+.merch-feature-image img[src*="portrait-artwork-reference"]{object-fit:contain!important}
+@media(max-width:900px){.merch-feature-image{aspect-ratio:4/3}
+}
+
+/* ---------- Shop picks: compact cards, no long boxes ---------- */
+@media(max-width:700px){
+ #grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ #grid .card .pic{aspect-ratio:4/5!important;height:auto!important}
+ #grid .card .pic img{height:100%;object-fit:cover}
+ #grid .card .body{padding:10px 10px 6px!important;gap:3px}
+ #grid .card .name{font-size:14px!important;line-height:1.25}
+ #grid .card .note{display:none!important}
+ #grid .card .buy{margin:6px 10px 10px!important;padding:9px 6px!important;font-size:10px!important;letter-spacing:.06em!important}
+}
+@media(min-width:701px){#grid .card .pic{aspect-ratio:4/5!important;height:auto!important}}
+
+/* ---------- Footer: links on one line, languages together, centered ---------- */
+.footer-nav{display:flex!important;flex-wrap:wrap;justify-content:center!important;align-items:center;gap:12px 20px!important}
+.footer-nav::before{content:'';order:1;flex-basis:100%;height:0}
+.footer-nav>a:not(.footer-language){order:0;white-space:nowrap}
+.footer-nav>.footer-language{order:2;white-space:nowrap}
+
+/* ---------- Collab: Maria's logo on top ---------- */
+.collab-logo{display:block;width:min(360px,78vw);height:auto;margin:0 0 14px -6px;filter:drop-shadow(0 0 18px #c958c933)}
+@media(max-width:700px){.collab-logo{margin:0 auto 12px}}
+
+/* ---------- Item arrows stay put: feature box keeps one size ---------- */
+@media(min-width:901px){.merch-feature{height:560px;grid-template-rows:100%}.merch-feature-image{height:560px}.merch-feature-copy{overflow:auto;scrollbar-width:none}}
+@media(max-width:900px){.merch-feature-copy{min-height:340px}}
+.mx-phone-screen.is-ig{background:#fff}.mx-phone-screen.is-ig iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- Second shot: full Alameda photo, face always visible, stays on screen longer ---------- */
+.film{height:210svh!important}
+.film .alameda-shot .media video{display:none!important}
+.film .alameda-shot .media{left:auto!important;right:6vw!important;top:calc(76px + 2svh)!important;bottom:auto!important;height:calc(96svh - 96px)!important;width:auto!important;aspect-ratio:1720/3096;border-radius:26px!important;border:2px solid #e05cc4;box-shadow:0 0 40px #d23aa855;transform:none!important}
+.film .alameda-shot .media>img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top!important}
+.film .alameda-shot::after{display:none}
+@media(max-width:799px){
+ .film{height:210svh!important}
+ .film .alameda-shot .media{left:0!important;right:0!important;top:60px!important;width:100vw!important;height:auto!important;border-radius:0!important;border:0;box-shadow:none}
+ .film .alameda-shot .cap{bottom:150px!important;text-shadow:0 2px 14px #000c}
+ .film.has-scrolled .hint{display:none!important}
+ .film .alameda-shot .cap h3{font-size:44px!important}
+ .film.has-scrolled .heart-motion{animation:none!important;opacity:1!important;left:auto!important;right:3vw!important;top:auto!important;bottom:170px!important;width:min(30vw,120px)!important;transform:none!important;filter:drop-shadow(0 0 12px #e9bd6a)}
+}
+.yt-poster{position:absolute;inset:0;padding:0;border:0;background:none;cursor:pointer}.yt-poster img{width:100%;height:100%;object-fit:cover;display:block}
+/* players stay invisible over the thumbnail until they are actually playing */
+.mp-player{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0;z-index:3;opacity:0;transition:opacity .25s}
+.mp-on .mp-player,.mp-on.mp-player{opacity:1}
+.movie-feature.is-playing .movie-stage{background:transparent}
+#shortsRail{scrollbar-width:none}#shortsRail::-webkit-scrollbar{display:none}
+/* first look: lead with Maria's face */
+.film .intro-first-poster img{object-fit:cover!important;object-position:28% 22%!important;transform:scale(1.3);transform-origin:27% 22%}
+@media(max-width:799px){
+ .intro-first-screen{aspect-ratio:1/1}
+ .film .intro-first-poster img{object-position:22% 15%!important;transform:scale(1.7);transform-origin:26% 22%}
+ .film .hint{display:none!important}
+ .film.has-first-look .first-look-shot .cap{bottom:110px!important}
+ .film.has-first-look .first-look-shot .cap h1{font-size:58px!important}
+ .heart-motion-red{top:auto!important;bottom:150px!important;width:min(40vw,170px)!important}
+}
+/* movie club: the real player is ready in the big frame, no overlay buttons */
+.movie-feature .movie-copy{display:none!important}
+.movie-feature{aspect-ratio:16/9;min-height:0!important;height:auto!important}
+.movie-feature .movie-stage{display:block!important;background:transparent}
+.movie-feature.mp-on>img{visibility:hidden}
+.movie-feature:after{display:none!important}
+/* movie club controls */
+.movie-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0 4px;flex-wrap:wrap}
+.movie-controls button{width:52px;height:52px;border-radius:14px;border:1px solid #d86bd0;background:linear-gradient(145deg,#3a1450,#1b0d29);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 0 18px #c43ab044}
+.movie-controls .mc-main{width:66px;height:66px;font-size:24px;border:0;background:linear-gradient(135deg,#ff3fa4,#8c3cf0);box-shadow:0 0 26px #ff3fa477}
+.movie-controls button:hover{transform:translateY(-1px);filter:brightness(1.15)}
+.movie-controls a{margin-left:8px;color:#ffc4ea;font:700 13px var(--sans,sans-serif)}
+@media(max-width:600px){.movie-controls{gap:10px}.movie-controls a{flex-basis:100%;text-align:center;margin:4px 0 0}}
+/* lead to the real YouTube page (counted view, likes, subs) while a long video plays */
+.mp-yt{position:absolute;z-index:6;right:14px;bottom:58px;display:none;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#ff0033;color:#fff!important;font:700 13px var(--sans,sans-serif);text-decoration:none;box-shadow:0 6px 22px #0008;opacity:.95}
+.mp-yt svg{width:22px;height:16px}
+.mp-yt:hover{opacity:1;transform:translateY(-1px)}
+.mp-on .mp-yt,.mp-on>.mp-yt{display:inline-flex}
+@media(max-width:600px){.mp-yt{right:10px;top:10px;bottom:auto;padding:7px 11px;font-size:12px}}
+/* shirt rail under the hair set: same pink scrollbar as the other shirt rails */
+.merch-style-rail,#merchGrid{scrollbar-width:thin;scrollbar-color:#ca71c6 #1b1127}
+.merch-style-rail::-webkit-scrollbar,#merchGrid::-webkit-scrollbar{height:8px}
+.merch-style-rail::-webkit-scrollbar-track,#merchGrid::-webkit-scrollbar-track{background:#1b1127;border-radius:8px}
+.merch-style-rail::-webkit-scrollbar-thumb,#merchGrid::-webkit-scrollbar-thumb{background:#ca71c6;border-radius:8px}
+
+/* hair set arrows: smaller circles outside the card on PC, a pair under the card on phone */
+.merch-feature{overflow:visible!important}
+.merch-feature-image{border-radius:27px 0 0 27px}
+.merch-feature>.side-carousel-arrow{width:44px;height:44px;font-size:30px;border-width:1.5px}
+@media(min-width:901px){.merch-feature>.side-carousel-prev{left:-62px}.merch-feature>.side-carousel-next{right:-62px}}
+@media(max-width:900px){
+ .merch-feature-image{border-radius:21px 21px 0 0}
+ .merch-feature{margin-bottom:66px}
+ .merch-feature>.side-carousel-arrow{top:auto!important;bottom:-58px;transform:none!important;width:44px;height:44px}
+ .merch-feature>.side-carousel-arrow:hover{transform:scale(1.08)!important}
+ .merch-feature>.side-carousel-prev{left:calc(50% - 58px)!important;right:auto!important}
+ .merch-feature>.side-carousel-next{right:calc(50% - 58px)!important;left:auto!important}
+}
+/* movie club arrows: same small circles as the hair set, outside the player on PC */
+.club-arrows{display:none!important}
+.club-layout>div:first-child{position:relative}
+.movie-out-arrow{width:44px;height:44px;font-size:30px;border-width:1.5px;top:calc(var(--mf-h,50%) / 2)}
+@media(min-width:901px){
+ .movie-club>.wrap{width:min(1480px,calc(100% - 150px))!important}
+ .movie-out-arrow.side-carousel-prev{left:-60px}
+ .movie-out-arrow.side-carousel-next{right:-38px}
+ .movie-out-arrow{top:calc((100% - 120px)/2)}
+}
+@media(max-width:900px){.movie-out-arrow{display:none!important}}
+@media(min-width:901px){.movie-controls [data-mc=prev],.movie-controls [data-mc=next]{display:none}.movie-out-arrow.side-carousel-next{right:-36px}}
+.shirt-rail-box{margin-top:18px}.shirt-rail-box>.mx-arrow{top:calc(50% - 8px)}
+@media(max-width:700px){.shirt-rail-box{padding:0 34px}}
+/* whole shirt always visible inside the feature box */
+.merch-feature-image{position:relative!important;display:block!important}
+.merch-feature-image img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto!important}
+@media(max-width:900px){.merch-feature-image{aspect-ratio:1/1!important;height:auto!important}}
+
+/* ---------- Shots 3-4: real beach clips (1080p, silent loops), face front ---------- */
+.film{height:320svh!important}
+.film .clip-shot .media{left:auto!important;right:6vw!important;top:calc(76px + 6svh)!important;bottom:auto!important;width:min(56vw,1000px)!important;height:auto!important;aspect-ratio:16/9;border-radius:24px!important;border:2px solid #e05cc4;box-shadow:0 0 40px #d23aa855;overflow:hidden;transform:none!important;background:#1c0b2a!important}
+.film .clip-shot .media video{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 30%!important;opacity:1!important}
+.film .clip-shot::after{display:none}
+@media(max-width:799px){
+ .film{height:300svh!important}
+ .film .clip-shot .media{left:12px!important;right:12px!important;top:72px!important;width:auto!important;aspect-ratio:4/5}
+ .film .clip-shot .media video{object-position:center 25%!important}
+ .film .clip-shot .cap{bottom:110px!important}
+ .film .clip-shot .cap h3{font-size:44px!important}
+}
+/* profile photo circle: same as PC, just a touch bigger on phone (not huge) */
+.profile .avatar{width:128px!important;height:128px!important;aspect-ratio:1/1!important;border-radius:50%!important;overflow:visible!important;margin-inline:auto}
+.profile .avatar #av,.profile .avatar #av img{border-radius:50%!important}
+@media(max-width:799px){.profile .avatar{width:150px!important;height:150px!important}}
+/* gold heart pinned beside the text, never over her photos on PC */
+@media(min-width:800px){.film.has-scrolled .heart-motion{animation:none!important;opacity:1!important;left:34%!important;top:auto!important;bottom:16%!important;width:clamp(150px,13vw,210px)!important;transform:none!important;filter:drop-shadow(0 0 14px #e9bd6a)}}
+/* ---------- Phone header: second row with nav + socials (hamburger stays) ---------- */
+.phone-subnav{display:none}
+@media(max-width:799px){
+ .bar{flex-wrap:wrap;padding-bottom:6px!important}
+ .phone-subnav{display:flex;flex-basis:100%;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;padding-top:6px;border-top:1px solid #c478c433;overflow-x:auto;scrollbar-width:none}
+ .phone-subnav::-webkit-scrollbar{display:none}
+ .phone-subnav nav{display:flex;gap:2px}
+ .phone-subnav nav a{display:inline-block!important;font-family:var(--cond);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12px;padding:6px 8px;border-radius:999px;color:#fff;white-space:nowrap}
+ .phone-subnav .soc{display:flex!important;gap:4px;align-items:center}
+ .phone-subnav .soc a{display:grid!important;place-items:center;width:30px;height:30px}
+ .phone-subnav .soc svg,.phone-subnav .soc img{width:18px;height:18px}
+ /* push the opening down to clear the taller header */
+ .intro-first-look{top:118px!important}
+ .film .alameda-shot .media{top:104px!important}
+ .film .clip-shot .media{top:114px!important}
+}
+/* VIP signup: name, email, optional texts */
+.vip-text{flex-basis:100%;display:flex!important;align-items:center;gap:10px;font:600 14px var(--sans,sans-serif)!important;letter-spacing:0!important;text-transform:none!important;color:#f4dcf0!important;cursor:pointer}
+.vip-text input{width:20px;height:20px;flex:none!important;accent-color:#ff3fa4;margin:0}
+#vipPhone{flex-basis:100%}
+.vip-sms{flex-basis:100%;color:#c9b3d3;font-size:12px;line-height:1.4}
+/* featured: IG phone arrows on its sides (PC), more breathing room */
+@media(min-width:901px){
+ .fgrid{gap:72px!important;align-items:center}
+ .freel.mx-phone{position:relative;overflow:visible!important}
+ .freel.mx-phone .mx-phone-bar{padding:0 12px}
+ .freel.mx-phone .mx-phone-bar .mx-arrow{position:absolute;top:auto;bottom:calc(50% + 10px);width:44px;height:44px;border-radius:50%;border:1.5px solid #f2a4e3;background:linear-gradient(145deg,#5b2370f2,#181021f2);box-shadow:0 8px 30px #0009,0 0 20px #d94db355}
+ .freel.mx-phone .mx-phone-bar .mx-arrow svg{width:20px;height:20px;stroke-width:3;filter:none}
+ .freel.mx-phone .mx-phone-bar .mx-prev{left:-62px}
+ .freel.mx-phone .mx-phone-bar .mx-next{right:-62px}
+}
+@media(min-width:901px){.freel.mx-phone .mx-phone-bar{position:static}.freel.mx-phone .mx-phone-bar .mx-arrow{top:50%!important;bottom:auto!important;transform:translateY(-50%)}}
+/* shirt rows: same pink circle arrows as the hair set */
+.shirt-rail-box>.mx-arrow,.landing-merch-carousel>.landing-merch-arrow{width:44px!important;height:44px!important;border-radius:50%!important;border:1.5px solid #f2a4e3!important;background:linear-gradient(145deg,#5b2370f2,#181021f2)!important;box-shadow:0 8px 30px #0009,0 0 20px #d94db355!important;display:grid!important;place-items:center;font:500 30px/1 system-ui!important;text-shadow:none!important;color:#fff!important}
+.shirt-rail-box>.mx-arrow svg{width:20px;height:20px;stroke-width:3;filter:none}
+@media(min-width:901px){.shirt-rail-box{padding:0!important}.shirt-rail-box>.mx-prev{left:-62px}.shirt-rail-box>.mx-next{right:-62px}
+ .landing-merch-carousel{padding:0!important}.landing-merch-carousel>.landing-merch-prev{left:-62px!important}.landing-merch-carousel>.landing-merch-next{right:-62px!important}}
+@media(max-width:900px){.shirt-rail-box,.landing-merch-carousel{padding:0 50px!important}.shirt-rail-box>.mx-arrow,.landing-merch-carousel>.landing-merch-arrow{width:40px!important;height:40px!important}}
+/* movie club arrows: identical, level, centered on the player */
+.movie-out-arrow{width:44px!important;height:44px!important;font:500 30px/1 system-ui!important;transform:translateY(-50%)!important}
+.movie-out-arrow:hover{transform:translateY(-50%) scale(1.08)!important}
+@media(min-width:901px){.club-layout{column-gap:100px!important}.movie-out-arrow.side-carousel-prev{left:-62px!important;right:auto!important}.movie-out-arrow.side-carousel-next{right:-62px!important;left:auto!important}}
+.maria-sparkle{display:inline-block;width:1.7em;height:1.7em;vertical-align:-.5em;margin:-.2em 0 -.2em .02em;filter:drop-shadow(0 0 10px #ff4fb866)}
+.maria-clapper{display:inline-block;width:1.7em;height:1.7em;vertical-align:-.5em;margin:-.2em .06em -.2em -.1em;filter:drop-shadow(0 0 10px #ff4fb855)}
+/* Maria's name: Blender bubble letters with a soft shine sweep */
+.bubble-name{position:relative;width:min(560px,92%);margin:6px auto 4px;line-height:0}
+.bubble-name img{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 18px #ff3fa455)}
+.bubble-name::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,#ffffffb0 48%,transparent 60%);background-size:250% 100%;background-position:120% 0;animation:bubbleShine 6s ease-in-out infinite;mix-blend-mode:soft-light;pointer-events:none;-webkit-mask:url(/assets/maria-name-bubble.webp?v=3) center/100% 100% no-repeat;mask:url(/assets/maria-name-bubble.webp?v=3) center/100% 100% no-repeat}
+@keyframes bubbleShine{0%,60%{background-position:120% 0}85%,100%{background-position:-30% 0}}
+@media(prefers-reduced-motion:reduce){.bubble-name::after{animation:none;display:none}}
+.sr-name{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:600px){.bubble-name{width:94%}}
+/* movie club title: clapper + Blender bubble letters + sparkle on one line */
+.movie-title-3d{display:flex!important;align-items:center;gap:.15em;flex-wrap:nowrap;margin-top:6px}
+.movie-title-3d .movie-bubble{height:1.05em;width:auto;max-width:calc(100% - 3.6em);object-fit:contain;filter:drop-shadow(0 5px 14px #ff3fa455)}
+.movie-title-3d .maria-clapper,.movie-title-3d .maria-sparkle{flex:none;margin:0;vertical-align:middle}
+@media(max-width:600px){.movie-title-3d{font-size:30px!important}.movie-title-3d .movie-bubble{height:1.1em}}
+
+/* 10-13: titles on phone — icons twinkle via CSS too (backup if an animated image is paused), words get the full row, clapper + sparkle tucked into the corners */
+@keyframes mxTwinkle{0%,100%{transform:scale(1) rotate(0);filter:drop-shadow(0 0 8px #ff4fb866) brightness(1)}50%{transform:scale(1.14) rotate(8deg);filter:drop-shadow(0 0 16px #ffd6f5cc) brightness(1.25)}}
+@keyframes mxClap{0%,82%,100%{transform:rotate(0)}88%{transform:rotate(-10deg)}94%{transform:rotate(4deg)}}
+.movie-title-3d .maria-sparkle{animation:mxTwinkle 2.4s ease-in-out infinite}
+.movie-title-3d .maria-clapper{animation:mxClap 3.2s ease-in-out infinite;transform-origin:20% 80%}
+@media(prefers-reduced-motion:reduce){.movie-title-3d .maria-sparkle,.movie-title-3d .maria-clapper{animation:none}}
+@media(max-width:600px){
+ .movie-title-3d{position:relative;display:block!important;font-size:inherit!important;padding:30px 0 30px;margin:4px 0 0;text-align:center;line-height:0}
+ .movie-title-3d .movie-bubble{display:block;width:100%;height:auto;max-width:100%;margin:0 auto}
+ .movie-title-3d .maria-clapper{position:absolute;left:-2px;top:-4px;width:46px;height:46px}
+ .movie-title-3d .maria-sparkle{position:absolute;right:-2px;bottom:-6px;width:48px;height:48px}
+}

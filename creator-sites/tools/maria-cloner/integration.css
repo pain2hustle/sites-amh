@@ -1,0 +1,87 @@
+/* Integration contracts only: layout/visual primitives come from pinned Maria CSS. */
+:root{--maria-header:80px}
+html{scroll-padding-top:calc(var(--maria-header) + 20px)}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+header.maria-clone-header{position:fixed!important;inset:0 0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:var(--maria-header)!important;min-height:0!important;width:100%!important;padding:10px 4vw!important;gap:16px!important;box-sizing:border-box!important;background:#190e24f5!important;z-index:100!important}
+header.maria-clone-header::before,header.maria-clone-header::after{display:none!important}
+header.maria-clone-header .maria-brand{display:flex!important;align-items:center!important;flex:0 1 190px!important;width:190px!important;min-width:90px!important;height:56px!important;margin:0!important}
+header.maria-clone-header .maria-brand img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:left center!important;margin:0!important}
+header.maria-clone-header .right{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:12px!important;min-width:0!important}
+header.maria-clone-header .maria-primary-nav{display:flex!important;gap:16px!important;align-items:center!important}
+header.maria-clone-header .maria-primary-nav a{display:inline-flex!important;visibility:visible!important;opacity:1!important;min-height:40px!important;align-items:center!important;font-size:12px!important;white-space:nowrap!important;padding:0!important;margin:0!important}
+header.maria-clone-header .maria-socials{display:flex!important;align-items:center!important;gap:6px!important}
+header.maria-clone-header .maria-socials a{display:flex!important;align-items:center!important;justify-content:center!important;position:relative!important;width:34px!important;height:34px!important;flex-shrink:0!important;border-radius:50%!important;padding:7px!important;font-size:10px!important}
+header.maria-clone-header .maria-socials img{width:20px!important;height:20px!important;object-fit:contain!important}
+header.maria-clone-header .right>button{position:relative!important;width:42px!important;height:42px!important;min-width:42px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:10px!important;flex-shrink:0!important}
+header.maria-clone-header .right>.burger,header.maria-clone-header .right>.menu-button{flex-direction:column!important;gap:5px!important}
+header.maria-clone-header .right>.release-primary{display:inline-flex!important;align-items:center!important;min-height:40px!important;padding:0 16px!important;border-radius:24px;background:#f2a5da;color:#20102c;font-size:12px;font-weight:700}
+#menu{top:var(--maria-header)!important;max-height:calc(100dvh - var(--maria-header))!important;overflow:auto!important}
+#menu[inert]{visibility:hidden!important;pointer-events:none!important}
+body.menu-open #menu{visibility:visible!important;opacity:1!important;transform:none!important;pointer-events:auto!important}
+.maria-socials a.release-text-social{width:auto!important;min-width:34px!important}
+.film .stage{height:100svh!important;min-height:740px!important}
+.film .shot .media{inset:calc(var(--maria-header) + 30px) 5% 75px 53%!important;width:auto!important;height:auto!important;border-radius:22px!important;overflow:hidden!important;opacity:1!important;transform:none!important}
+.film .shot .media img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 25%!important;opacity:1!important;transform:none!important}
+.film .shot::after{background:none!important}
+.film .cap{inset:42% auto auto 6%!important;width:41%!important;max-width:560px!important;transform:translateY(-15%)!important;text-align:left!important;padding:0!important}
+.film .cap .hero-wordmark{display:block!important;width:100%!important;max-width:430px!important;height:auto!important;max-height:140px!important;object-fit:contain!important;object-position:left center!important;margin:10px 0!important}
+.film .cap h1 .script{font-size:clamp(22px,2.6vw,38px)!important;line-height:1.15!important}
+.film .cap p{font-size:15px!important;line-height:1.6!important}
+.film .first-actions{display:flex!important;flex-wrap:wrap!important;gap:10px!important;margin-top:18px!important}
+.film .first-actions>.btn{display:inline-flex!important;align-items:center!important;min-height:44px!important;padding:12px 18px!important;font-size:12px!important;white-space:normal!important}
+.film .shot-tag{top:calc(var(--maria-header) + 30px)!important;left:6%!important;max-width:41%!important}
+.film .cinema-controls{display:flex!important;align-items:center!important;gap:12px!important;inset:auto 6% 20px 6%!important}
+.film .cinema-controls>*{min-height:44px!important}
+.film .prog{bottom:8px!important}
+.film .heart-motion,.film .heart-motion-red{display:none!important}
+.profile-layout{grid-template-columns:minmax(0,1fr)!important}
+.profile-videos:empty{display:none!important}
+.profile .profile-brand{display:block!important;width:min(460px,100%)!important;height:auto!important;max-height:170px!important;object-fit:contain!important;margin:auto!important}
+.profile .avatar>img{width:100%!important;height:100%!important;border-radius:50%;object-fit:cover}
+.profile .links img{width:28px!important;height:28px!important;object-fit:contain!important;flex-shrink:0}
+.profile .lnk{display:flex!important;align-items:center!important;gap:16px!important;text-align:left!important}
+.profile .lnk>span:nth-child(2){flex:1}
+.movie-title-art{width:min(540px,100%);height:auto;max-height:140px;object-fit:contain;object-position:left}
+body[data-maria-slug=thecrookedman10] .film .shot .media{top:28%!important;bottom:auto!important;aspect-ratio:4/3!important}
+body[data-maria-slug=thecrookedman10] .film .shot .media img{object-position:center 40%!important}
+.creator-support .support-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.creator-support a{display:inline-flex;align-items:center;gap:10px;min-height:44px}
+.creator-support a img{width:24px;height:24px;object-fit:contain}
+html[data-theme=light] header.maria-clone-header{background:#f7f0e7f5!important;color:#28182e!important}
+html[data-theme=light] header.maria-clone-header a,html[data-theme=light] header.maria-clone-header button{color:#28182e!important}
+html[data-theme=light] .film{background:#f7f0e7!important;color:#28182e!important}
+html[data-theme=light] .film .cap,html[data-theme=light] .film .shot-tag{color:#28182e!important}
+@media(max-width:799px){
+ :root{--maria-header:112px}
+ header.maria-clone-header{padding:8px 14px!important;gap:8px!important;align-items:flex-start!important;flex-wrap:nowrap!important}
+ header.maria-clone-header .maria-brand{flex:0 1 160px!important;height:50px!important;width:160px!important;max-width:47vw!important}
+ header.maria-clone-header .right{height:50px!important;gap:6px!important}
+ header.maria-clone-header .maria-primary-nav{position:absolute!important;left:14px!important;bottom:4px!important;height:44px!important;gap:18px!important}
+ header.maria-clone-header .maria-primary-nav a{font-size:11px!important;letter-spacing:.02em!important}
+ header.maria-clone-header .maria-socials{position:absolute!important;right:14px!important;bottom:9px!important;gap:4px!important;max-width:110px!important;overflow:hidden!important}
+ header.maria-clone-header .maria-socials a:nth-child(n+3){display:none!important}
+ header.maria-clone-header .right>.release-primary{display:none!important}
+ .film .stage{min-height:880px!important;height:100svh!important}
+ .film .shot .media{inset:calc(var(--maria-header) + 24px) 18px auto!important;width:auto!important;height:39svh!important;min-height:270px!important;max-height:350px!important;aspect-ratio:auto!important}
+ .film .cap{inset:calc(var(--maria-header) + 39svh + 52px) 22px auto!important;width:auto!important;max-width:none!important;transform:none!important}
+ .film .cap .hero-wordmark{width:min(100%,350px)!important;max-height:105px!important;margin:8px 0!important}
+ .film .cap h1{font-size:36px!important;line-height:1.05!important}
+ .film .cap h1 .script{font-size:22px!important}
+ .film .cap h3{font-size:38px!important}
+ .film .cap p{font-size:13px!important;margin:8px 0!important}
+ .film .shot-tag{display:none!important}
+ .film .first-actions{margin-top:12px!important;gap:8px!important}
+ .film .first-actions>.btn{font-size:11px!important;padding:10px 13px!important}
+ .film .cinema-controls{inset:auto 22px 22px!important;flex-wrap:wrap!important;gap:8px!important}
+ body[data-maria-slug=thecrookedman10] .film .shot .media{top:calc(var(--maria-header) + 24px)!important;height:auto!important;min-height:0!important;aspect-ratio:4/3!important}
+ body[data-maria-slug=thecrookedman10] .film .cap{top:calc(var(--maria-header) + (100vw - 36px)*.75 + 54px)!important}
+ .profile-layout{padding-inline:20px!important}
+ .movie-title-art{max-height:90px!important}
+}
+@media(max-width:359px){header.maria-clone-header .maria-primary-nav{gap:10px!important}header.maria-clone-header .maria-socials a:nth-child(n+2){display:none!important}.film .cap{left:16px!important;right:16px!important}}
+@media(prefers-reduced-motion:reduce){.film{height:auto!important}.film .stage{position:relative!important}.film .shot:not(.on){display:none!important}}
+
+.film .stage{background-image:none!important}
+header.maria-clone-header .maria-socials img{filter:brightness(0) invert(1)!important}
+html[data-theme=light] header.maria-clone-header .maria-socials img{filter:none!important}
+.film .cap p{max-width:none!important;width:auto!important}
