@@ -13,8 +13,8 @@
   "requested_video_target": 16,
   "archive": {
     "name": "ari1of1.zip",
-    "size": 5409547,
-    "sha256": "302c4adfc0abc3cf1c02fcb20daa8f0b7953e084ad43210365224ce795ee7014"
+    "size": 5409553,
+    "sha256": "ba4a5510a05073c7ff106d3df93867d8126c9660518741ee9740f7fecb6ec700"
   },
   "files": {
     "creators/ari1of1/assets/amazon-wordmark.svg": {
@@ -34,8 +34,8 @@
       "sha256": "7e421cce77d904ace08f7366f9832eb7e7daf7a2fdbd49d391d865ed610b95b1"
     },
     "creators/ari1of1/assets/ari.js": {
-      "size": 8806,
-      "sha256": "fb91db47a9e788d14e22d50a8c4a0c7bd1e324cdb6f17812a48c151894ec8d03"
+      "size": 8838,
+      "sha256": "b70f4adccf2caefc2f0cd87f6a51d4d4931835df9d8cda7b2f3ca9a9c699434a"
     },
     "creators/ari1of1/assets/brand.css": {
       "size": 34208,

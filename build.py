@@ -3,7 +3,7 @@
 from pathlib import Path
 import argparse,hashlib,importlib.util,json,os,stat,tempfile,zipfile
 BASE_SHA='f68462be31b9da370c040e00784eeafffe6e5857f0309692324b4dc1ca384a88'
-MANIFEST_SHA='f4d39a97fca612863669bf67461ba3b1846c24a6880ea0740e631302d86c58f0'
+MANIFEST_SHA='75f3e303593dbadb399406d52a3a70f09d556e60cb63eb37581c09fca7fa4a89'
 NAMESPACE='creators/ari1of1/'
 
 def need(v,msg):
