@@ -47,12 +47,42 @@ def apply_release(output,m,data):
  need(all(after[n]==m['files'][n]['sha256']for n in data),'Every creator output hash')
  return {'files':len(after),'prior_files_preserved':6287,'business_records_unchanged':3489,'creator_records':3387,'verified_reels':4,'requested_video_target_met':False}
 
+def apply_influencers(repo,output):
+ """Claude batch800 (2026-10-29): append live-checked influencer sites to /creators/; every prior file and record kept."""
+ import html as H
+ src=safe(repo/'influencer-release/batch800.json')
+ if not src.exists():return {'influencer_records_added':0}
+ recs=json.loads(src.read_bytes())['records'];output=safe(output)
+ need(all(r['id'].startswith('creator-b800-')and r['url'].startswith('https://')and r['url'].endswith('.amh-creator-previews.pages.dev')for r in recs),'Influencer record identity')
+ hp=output/'creators/index.html';jp=output/'creators/sites.json';page=hp.read_text(encoding='utf-8');old=json.loads(jp.read_bytes())
+ have={r['url']for r in old['records']}|{r['id']for r in old['records']};recs=[r for r in recs if r['url']not in have and r['id']not in have]
+ need(len({r['id']for r in recs})==len(recs),'Duplicate influencer ids')
+ before={p.relative_to(output).as_posix():sha(p.read_bytes())for p in output.rglob('*')if p.is_file()}
+ n0=len(old['records']);n1=n0+len(recs)
+ checked=sum(1 for r in old['records']if r.get('freshlyChecked'))
+ def li(r):
+  e=H.escape;w=[x for x in r['name'].split()if x[:1].isalnum()];mono=e(''.join(x[0]for x in w[:2]).upper()or r['name'][:2])
+  return('<li class="record" data-directory-record="%s" data-name="%s" data-city="" data-label="Creator site" data-category="creators" data-subcategory="" data-status="live_checked" data-review="false" data-featured="false" data-date="%s"><a class="card" href="%s"><div class="card-top"><span class="monogram" aria-hidden="true">%s</span><span class="kind">Creator site</span></div><div><h2>%s</h2><span class="city"></span></div><div class="card-end"><span class="status"><i aria-hidden="true"></i>Live — browser checked<br>%s</span><span class="arrow" aria-hidden="true">↗</span></div></a></li>'
+   %(e(r['id']),e(r['name']),e(r['checkedAt']),e(r['url']),mono,e(r['name']),e(r['checkedAt'])))
+ end='</ul><p class="catalog-info"';need(page.count(end)==1,'Single creator list end')
+ import re
+ pats=[r'<strong>([\d,]+)</strong><span>Recorded websites',r'>([\d,]+) websites<',r'<strong>([\d,]+)</strong><span>Recently checked']
+ need(all(len(re.findall(p,page))==1 for p in pats),'Directory counters located')
+ page=page.replace(end,''.join(li(r)for r in recs)+end)
+ for p in pats:page=re.sub(p,lambda m:m.group(0).replace(m.group(1),format(int(m.group(1).replace(',',''))+len(recs),',')),page)
+ new=dict(old);new['records']=old['records']+recs;new['counts']=dict(old.get('counts',{}),claude_batch800_live_checked=len(recs))
+ hp.write_text(page,encoding='utf-8',newline='');jp.write_text(json.dumps(new,ensure_ascii=False,separators=(',',':')),encoding='utf-8',newline='')
+ after={p.relative_to(output).as_posix():sha(p.read_bytes())for p in output.rglob('*')if p.is_file()}
+ need(set(after)==set(before)and all(after[k]==v for k,v in before.items()if k not in('creators/index.html','creators/sites.json')),'Only the creator directory changed')
+ need(json.loads(jp.read_bytes())['records'][:n0]==old['records'],'All previous creator records unchanged')
+ return {'influencer_records_added':len(recs),'creator_records_total':n1}
+
 def run_build(repo,output):
  repo=safe(repo);dest=safe(output);need(not dest.exists()and dest.parent.is_dir(),'Fresh destination required');need(dest!=repo and not repo.is_relative_to(dest),'Output cannot replace source')
  need(not any(dest.is_relative_to(repo/p)or(repo/p).is_relative_to(dest)for p in['packs','directory-overlay','business-release','creator-release']),'Output/input overlap')
  base,m,data=load_release(repo)
  with tempfile.TemporaryDirectory(prefix='.ari-reviewed-',dir=dest.parent)as t:
-  staged=Path(t)/'public';base.run_build(repo,staged);result=apply_release(staged,m,data);load_release(repo)
+  staged=Path(t)/'public';base.run_build(repo,staged);result=apply_release(staged,m,data);load_release(repo);result.update(apply_influencers(repo,staged))
   need(not dest.exists(),'Destination changed during build');os.rename(staged,dest)
  print(json.dumps(result,sort_keys=True));return result
 
