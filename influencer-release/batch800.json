@@ -3,6 +3,30 @@
  "batch": "claude-batch800-20261029",
  "records": [
   {
+   "id": "creator-b800-aakash-gupta",
+   "name": "Aakash Gupta",
+   "url": "https://aakash-gupta.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-aanam-c",
+   "name": "Aanam C",
+   "url": "https://aanam-c.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-aaron-ramirez",
    "name": "Aaron Ramirez",
    "url": "https://aaron-ramirez.amh-creator-previews.pages.dev",
@@ -18,6 +42,18 @@
    "id": "creator-b800-abby-roberts",
    "name": "Abby Roberts",
    "url": "https://abby-roberts.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-adam-clery",
+   "name": "Adam Clery",
+   "url": "https://adam-clery.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -123,6 +159,30 @@
    "flags": []
   },
   {
+   "id": "creator-b800-ale-asmr",
+   "name": "Ale ASMR",
+   "url": "https://ale-asmr.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-alebanana",
+   "name": "AleBanana",
+   "url": "https://alebanana.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-aleminero",
    "name": "AleMinero",
    "url": "https://aleminero.amh-creator-previews.pages.dev",
@@ -171,6 +231,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-alexandrasgirlytalk",
+   "name": "AlexandrasGirlyTalk",
+   "url": "https://alexandrasgirlytalk.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-alexis-nikole",
    "name": "Alexis Nikole",
    "url": "https://alexis-nikole.amh-creator-previews.pages.dev",
@@ -195,9 +267,33 @@
    "flags": []
   },
   {
+   "id": "creator-b800-allison-in-tokyo",
+   "name": "Allison in Tokyo",
+   "url": "https://allison-in-tokyo.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-amanda-ensing",
    "name": "Amanda Ensing",
    "url": "https://amanda-ensing.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-amy-okoli",
+   "name": "Amy Okoli",
+   "url": "https://amy-okoli.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -222,6 +318,30 @@
    "id": "creator-b800-andrew-flair",
    "name": "Andrew Flair",
    "url": "https://andrew-flair.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-angela-masetla",
+   "name": "Angela Masetla",
+   "url": "https://angela-masetla.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-ankit-baiyanpuria",
+   "name": "Ankit Baiyanpuria",
+   "url": "https://ankit-baiyanpuria.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -279,9 +399,33 @@
    "flags": []
   },
   {
+   "id": "creator-b800-aradir",
+   "name": "Aradir",
+   "url": "https://aradir.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-arief-muhammad",
    "name": "Arief Muhammad",
    "url": "https://arief-muhammad.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-arnell-armon",
+   "name": "Arnell Armon",
+   "url": "https://arnell-armon.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -339,6 +483,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-austrianbrickfan",
+   "name": "AustrianBrickFan",
+   "url": "https://austrianbrickfan.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-axell-hodges",
    "name": "Axell Hodges",
    "url": "https://axell-hodges.amh-creator-previews.pages.dev",
@@ -387,6 +543,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-bastian-cortes",
+   "name": "Bastian Cortes",
+   "url": "https://bastian-cortes.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-bayu-skak",
    "name": "Bayu Skak",
    "url": "https://bayu-skak.amh-creator-previews.pages.dev",
@@ -402,6 +570,30 @@
    "id": "creator-b800-bdotadot5",
    "name": "BdotAdot5",
    "url": "https://bdotadot5.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-beauticianchic",
+   "name": "Beauticianchic",
+   "url": "https://beauticianchic.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-becoming-filipino",
+   "name": "BecomingFilipino",
+   "url": "https://becoming-filipino.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -459,9 +651,57 @@
    "flags": []
   },
   {
+   "id": "creator-b800-benedict-cua",
+   "name": "Benedict Cua",
+   "url": "https://benedict-cua.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-bernadette-banner",
    "name": "Bernadette Banner",
    "url": "https://bernadette-banner.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-beth-cast",
+   "name": "Beth Cast",
+   "url": "https://beth-cast.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-bianca-renee",
+   "name": "Bianca Renee",
+   "url": "https://bianca-renee.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-bilal-akkad",
+   "name": "Bilal Akkad",
+   "url": "https://bilal-akkad.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -615,6 +855,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-bri-dominguez",
+   "name": "Bri Dominguez",
+   "url": "https://bri-dominguez.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-brian-esperon",
    "name": "Brian Esperon",
    "url": "https://brian-esperon.amh-creator-previews.pages.dev",
@@ -711,6 +963,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-bstyle",
+   "name": "Bstyle",
+   "url": "https://bstyle.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-byilhan",
    "name": "ByIlhan",
    "url": "https://byilhan.amh-creator-previews.pages.dev",
@@ -750,6 +1014,54 @@
    "id": "creator-b800-captain-disillusion",
    "name": "Captain Disillusion",
    "url": "https://captain-disillusion.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-cari-cakes",
+   "name": "Cari Cakes",
+   "url": "https://cari-cakes.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-carla-wonderland",
+   "name": "Carla Wonderland",
+   "url": "https://carla-wonderland.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-carrie-dayton",
+   "name": "Carrie Dayton",
+   "url": "https://carrie-dayton.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-catarina-filipe",
+   "name": "Catarina Filipe",
+   "url": "https://catarina-filipe.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -822,6 +1134,42 @@
    "id": "creator-b800-cherry-wallis",
    "name": "Cherry Wallis",
    "url": "https://cherry-wallis.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-chien-chien",
+   "name": "Chien Chien",
+   "url": "https://chien-chien.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-chigua",
+   "name": "Chigua",
+   "url": "https://chigua.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-chime-edwards",
+   "name": "Chime Edwards",
+   "url": "https://chime-edwards.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -999,9 +1347,57 @@
    "flags": []
   },
   {
+   "id": "creator-b800-clisare",
+   "name": "Clisare",
+   "url": "https://clisare.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-clumsycynthia",
+   "name": "ClumsyCynthia",
+   "url": "https://clumsycynthia.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-coco-chinelo",
+   "name": "Coco Chinelo",
+   "url": "https://coco-chinelo.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-coffeezilla",
    "name": "Coffeezilla",
    "url": "https://coffeezilla.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-cole-fogle",
+   "name": "Cole Fogle",
+   "url": "https://cole-fogle.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1023,9 +1419,33 @@
    "flags": []
   },
   {
+   "id": "creator-b800-cubfan135",
+   "name": "cubfan135",
+   "url": "https://cubfan135.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-cuffem",
    "name": "Cuffem",
    "url": "https://cuffem.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-d4rkframe",
+   "name": "D4rkFrame",
+   "url": "https://d4rkframe.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1071,9 +1491,81 @@
    "flags": []
   },
   {
+   "id": "creator-b800-dan-c-bearded",
+   "name": "Dan C Bearded",
+   "url": "https://dan-c-bearded.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-dana-lucia",
+   "name": "Dana Lucia",
+   "url": "https://dana-lucia.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-dankpods",
+   "name": "DankPods",
+   "url": "https://dankpods.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-danny-aarons",
+   "name": "Danny Aarons",
+   "url": "https://danny-aarons.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-danny-winget",
    "name": "Danny Winget",
    "url": "https://danny-winget.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-dant",
+   "name": "Dant",
+   "url": "https://dant.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-darcizzle-offshore",
+   "name": "Darcizzle Offshore",
+   "url": "https://darcizzle-offshore.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1107,9 +1599,33 @@
    "flags": []
   },
   {
+   "id": "creator-b800-dhvani-bhanushali",
+   "name": "Dhvani Bhanushali",
+   "url": "https://dhvani-bhanushali.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-diesel-creek",
    "name": "Diesel Creek",
    "url": "https://diesel-creek.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-diogo-costa",
+   "name": "Diogo Costa",
+   "url": "https://diogo-costa.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1131,9 +1647,57 @@
    "flags": []
   },
   {
+   "id": "creator-b800-dolly-singh",
+   "name": "Dolly Singh",
+   "url": "https://dolly-singh.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-drachinifel",
    "name": "Drachinifel",
    "url": "https://drachinifel.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-drawingwiffwaffles",
+   "name": "DrawingWiffWaffles",
+   "url": "https://drawingwiffwaffles.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-dreclipperhands",
+   "name": "Dreclipperhands",
+   "url": "https://dreclipperhands.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-drew-joiner",
+   "name": "Drew Joiner",
+   "url": "https://drew-joiner.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1167,6 +1731,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-dustins-fish-tanks",
+   "name": "Dustin’s Fish Tanks",
+   "url": "https://dustins-fish-tanks.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-dylan-is-in-trouble",
    "name": "Dylan Is In Trouble",
    "url": "https://dylan-is-in-trouble.amh-creator-previews.pages.dev",
@@ -1191,6 +1767,30 @@
    "flags": []
   },
   {
+   "id": "creator-b800-ella-victoria",
+   "name": "Ella Victoria",
+   "url": "https://ella-victoria.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-elliot-giles",
+   "name": "Elliot Giles",
+   "url": "https://elliot-giles.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-emil-abrahamsson",
    "name": "Emil Abrahamsson",
    "url": "https://emil-abrahamsson.amh-creator-previews.pages.dev",
@@ -1203,9 +1803,45 @@
    "flags": []
   },
   {
+   "id": "creator-b800-emily-rangel",
+   "name": "Emily Rangel",
+   "url": "https://emily-rangel.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-emirichu",
+   "name": "Emirichu",
+   "url": "https://emirichu.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-emzotic",
    "name": "Emzotic",
    "url": "https://emzotic.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-enjoyphoenix",
+   "name": "EnjoyPhoenix",
+   "url": "https://enjoyphoenix.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1230,6 +1866,30 @@
    "id": "creator-b800-ethan-becker",
    "name": "Ethan Becker",
    "url": "https://ethan-becker.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-falsesymmetry",
+   "name": "FalseSymmetry",
+   "url": "https://falsesymmetry.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-fbfragrances",
+   "name": "FBFragrances",
+   "url": "https://fbfragrances.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1275,6 +1935,30 @@
    "flags": []
   },
   {
+   "id": "creator-b800-folding-ideas",
+   "name": "Folding Ideas",
+   "url": "https://folding-ideas.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-foolish-baseball",
+   "name": "Foolish Baseball",
+   "url": "https://foolish-baseball.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-gabby-golf-girl",
    "name": "Gabby Golf Girl",
    "url": "https://gabby-golf-girl.amh-creator-previews.pages.dev",
@@ -1290,6 +1974,18 @@
    "id": "creator-b800-gabee",
    "name": "Gabee",
    "url": "https://gabee.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-gabriel-gundacker",
+   "name": "Gabriel Gundacker",
+   "url": "https://gabriel-gundacker.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1323,6 +2019,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-gaijin-goombah",
+   "name": "Gaijin Goombah",
+   "url": "https://gaijin-goombah.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-garden-answer",
    "name": "Garden Answer",
    "url": "https://garden-answer.amh-creator-previews.pages.dev",
@@ -1347,6 +2055,42 @@
    "flags": []
   },
   {
+   "id": "creator-b800-get-beamed",
+   "name": "Get_Beamed",
+   "url": "https://get-beamed.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-gigguk",
+   "name": "Gigguk",
+   "url": "https://gigguk.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-gingerpale",
+   "name": "GingerPale",
+   "url": "https://gingerpale.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-girl-talks-fish",
    "name": "Girl Talks Fish",
    "url": "https://girl-talks-fish.amh-creator-previews.pages.dev",
@@ -1362,6 +2106,30 @@
    "id": "creator-b800-goodtimeswithscar",
    "name": "GoodTimesWithScar",
    "url": "https://goodtimeswithscar.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-grace-helbig",
+   "name": "Grace Helbig",
+   "url": "https://grace-helbig.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-greatscott",
+   "name": "GreatScott!",
+   "url": "https://greatscott.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -1875,6 +2643,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-joey-antonelli",
+   "name": "Joey Antonelli",
+   "url": "https://joey-antonelli.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-jojo-gomez",
    "name": "JoJo Gomez",
    "url": "https://jojo-gomez.amh-creator-previews.pages.dev",
@@ -2106,6 +2886,18 @@
    "id": "creator-b800-kevin-noparvar",
    "name": "Kevin Noparvar",
    "url": "https://kevin-noparvar.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-kikoishot",
+   "name": "KikoisHot",
+   "url": "https://kikoishot.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -4275,6 +5067,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-techmoan",
+   "name": "Techmoan",
+   "url": "https://techmoan.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-technology-connections",
    "name": "Technology Connections",
    "url": "https://technology-connections.amh-creator-previews.pages.dev",
@@ -4407,6 +5211,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-the-perfume-guy",
+   "name": "The Perfume Guy",
+   "url": "https://the-perfume-guy.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-the-real-tarzann",
    "name": "The Real Tarzann",
    "url": "https://the-real-tarzann.amh-creator-previews.pages.dev",
@@ -4467,6 +5283,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-theo-baker",
+   "name": "Theo Baker",
+   "url": "https://theo-baker.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-thereportoftheweek",
    "name": "TheReportOfTheWeek",
    "url": "https://thereportoftheweek.amh-creator-previews.pages.dev",
@@ -4479,9 +5307,57 @@
    "flags": []
   },
   {
+   "id": "creator-b800-this-does-not-compute",
+   "name": "This Does Not Compute",
+   "url": "https://this-does-not-compute.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-thomas-smallwood",
+   "name": "Tom Smallwood",
+   "url": "https://thomas-smallwood.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-tiffany-ferguson",
    "name": "Tiffany Ferguson",
    "url": "https://tiffany-ferguson.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-tim-dessaint",
+   "name": "Tim Dessaint",
+   "url": "https://tim-dessaint.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-timtom",
+   "name": "TimTom",
+   "url": "https://timtom.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -4515,6 +5391,30 @@
    "flags": []
   },
   {
+   "id": "creator-b800-totally-not-mark",
+   "name": "Totally Not Mark",
+   "url": "https://totally-not-mark.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-travis-ridgen",
+   "name": "Travis Ridgen",
+   "url": "https://travis-ridgen.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-trefor-bazett",
    "name": "Dr. Trefor Bazett",
    "url": "https://trefor-bazett.amh-creator-previews.pages.dev",
@@ -4539,9 +5439,69 @@
    "flags": []
   },
   {
+   "id": "creator-b800-tyler-rizzi",
+   "name": "Tyler Rizzi",
+   "url": "https://tyler-rizzi.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-ufd-tech",
+   "name": "UFD Tech",
+   "url": "https://ufd-tech.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-uncle-jessy",
+   "name": "Uncle Jessy",
+   "url": "https://uncle-jessy.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-unjaded-jade",
    "name": "UnJaded Jade",
    "url": "https://unjaded-jade.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-unlistedleaf",
+   "name": "UnlistedLeaf",
+   "url": "https://unlistedleaf.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-unsympathischtv",
+   "name": "unsympathischTV",
+   "url": "https://unsympathischtv.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -4599,9 +5559,57 @@
    "flags": []
   },
   {
+   "id": "creator-b800-viviana-ochoa",
+   "name": "Viviana Ochoa",
+   "url": "https://viviana-ochoa.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-wendy-outdoors",
+   "name": "Wendy Outdoors",
+   "url": "https://wendy-outdoors.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-willwoosh",
+   "name": "Willwoosh",
+   "url": "https://willwoosh.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-wolters-world",
    "name": "Wolters World",
    "url": "https://wolters-world.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-ycro",
+   "name": "Ycro",
+   "url": "https://ycro.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
@@ -4623,9 +5631,33 @@
    "flags": []
   },
   {
+   "id": "creator-b800-z-reviews",
+   "name": "Z Reviews",
+   "url": "https://z-reviews.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-zermatt-neo",
    "name": "Zermatt Neo",
    "url": "https://zermatt-neo.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-zombey",
+   "name": "Zombey",
+   "url": "https://zombey.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
