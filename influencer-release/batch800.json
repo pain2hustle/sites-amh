@@ -1359,6 +1359,18 @@
    "flags": []
   },
   {
+   "id": "creator-b800-helen-li",
+   "name": "Helen Li",
+   "url": "https://helen-li.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
    "id": "creator-b800-heskicks",
    "name": "HesKicks",
    "url": "https://heskicks.amh-creator-previews.pages.dev",
@@ -4326,6 +4338,18 @@
    "id": "creator-b800-the-real-tarzann",
    "name": "The Real Tarzann",
    "url": "https://the-real-tarzann.amh-creator-previews.pages.dev",
+   "alternateUrls": [],
+   "status": "live_checked",
+   "statusLabel": "Live — browser checked",
+   "sourceSnapshotDate": "2026-10-29",
+   "checkedAt": "2026-10-29",
+   "freshlyChecked": true,
+   "flags": []
+  },
+  {
+   "id": "creator-b800-the-review-spot",
+   "name": "The Review Spot",
+   "url": "https://the-review-spot.amh-creator-previews.pages.dev",
    "alternateUrls": [],
    "status": "live_checked",
    "statusLabel": "Live — browser checked",
