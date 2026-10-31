@@ -10,21 +10,19 @@
     "subcategory": "barber_hair",
     "city": "San Francisco",
     "state": "CA",
-    "streetAddress": null,
-    "postalCode": null,
-    "phone": null,
+    "streetAddress": "1717 Harrison Street",
+    "postalCode": "94103",
+    "phone": "+14747112551",
     "locationLabel": "San Francisco, CA",
-    "locationSource": "City/state confirmed from public business page; street conflict retained for review",
+    "locationSource": "Published business contact details",
     "status": "live_checked",
-    "statusLabel": "Live — page identity checked",
+    "statusLabel": "Live — recently checked",
     "sourceSnapshotDate": "2026-10-31",
     "freshlyChecked": true,
-    "flags": [
-      "street_address_conflict"
-    ],
+    "flags": [],
     "featuredOrder": null,
     "recordedNames": [],
-    "reviewNote": "San Francisco shop, separate from Garrison’s Barber Studio (Fremont). The shop’s own site lists 1717 Harrison Street and +1 474 711 2551, which are disputed; street, postal code, phone and hours withheld pending verification.",
-    "checkScope": "Live page, robots, sitemap and all 41 assets HTTP-checked; desktop 1440px and phone 390px browser checks (images, crest, film, contact links, anchors, footer, no overflow) on deployment cb4180dd."
+    "reviewNote": "San Francisco shop, separate from Garrison’s Barber Studio (Fremont). Address, phone and hours confirmed by Austin on 2026-10-31.",
+    "checkScope": "Live page HTTP-checked; desktop 1440px and phone 390px browser checks (crest, film, gallery, articles, call/text/email/map links, embedded map, footer)."
   }
 }
