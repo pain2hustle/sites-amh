@@ -1,0 +1,30 @@
+{
+  "addTo": "directory/businesses.json",
+  "mode": "append-record-preserve-all-existing",
+  "record": {
+    "id": "business-72ccc31618b105db36bd",
+    "name": "Garrison Barber Shop",
+    "url": "https://garrisonbarbershop-sf.amhsites.pages.dev/",
+    "alternateUrls": [],
+    "category": "barbers",
+    "subcategory": "barber_hair",
+    "city": "San Francisco",
+    "state": "CA",
+    "streetAddress": null,
+    "postalCode": null,
+    "phone": null,
+    "locationLabel": "San Francisco, CA",
+    "locationSource": "City/state confirmed from public business page; street conflict retained for review",
+    "status": "live_checked",
+    "statusLabel": "Live — page identity checked",
+    "sourceSnapshotDate": "2026-10-31",
+    "freshlyChecked": true,
+    "flags": [
+      "street_address_conflict"
+    ],
+    "featuredOrder": null,
+    "recordedNames": [],
+    "reviewNote": "San Francisco shop, separate from Garrison’s Barber Studio (Fremont). The shop’s own site lists 1717 Harrison Street and +1 474 711 2551, which are disputed; street, postal code, phone and hours withheld pending verification.",
+    "checkScope": "Live page, robots, sitemap and all 41 assets HTTP-checked; desktop 1440px and phone 390px browser checks (images, crest, film, contact links, anchors, footer, no overflow) on deployment cb4180dd."
+  }
+}
